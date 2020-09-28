@@ -66,17 +66,17 @@ The first step is to unzip the downloaded package. Inside, you will find the zip
 
 ### Create a New Content API Key
 
-In order for the theme search to work, make a new *Content API Key* by following the next steps.
+For the theme search to work, follow these steps to make a new *Content API Key*.
 
-In the left-side menu of your Ghost admin click **Integrations** then **+ add custom integration**.
+In the left-side menu of your Ghost admin, click **Integrations** then **+ Add custom integration**.
 
 ![Add new Ghost Custom integrations](https://d33wubrfki0l68.cloudfront.net/9e0d6d92fc0ad220dd8b98b45b5cedd95f72e50e/b642d/images/docs/ghost/shared/custom-integrations/add.png)
 
-Then, give the new integration a name, for example, *Search* and click **Create**.
+Then, give the new integration a name, like "Search", and click **Create**.
 
 ![Name for the Ghost Custom integrations](https://d33wubrfki0l68.cloudfront.net/0533efbaff834bcc5b8dbe09a044313d3ecde050/8fcb0/images/docs/ghost/shared/custom-integrations/name.png)
 
-Now, a new API Key is created, hover over it and the **Copy** button will appear, click on it to copy the Key to the clipboard.
+A new content API Key will be created. When you hover over it, a **Copy** button will appear. Click the button to copy the Key to the clipboard.
 
 ![Copy Ghost Custom integrations Content API Key](https://d33wubrfki0l68.cloudfront.net/21a910012bd866b1d5ba907bbd6da0fb020795e1/48437/images/docs/ghost/shared/custom-integrations/key.png)
 
@@ -90,7 +90,7 @@ Add the following code to the **Site Header** box after replacing the *`API_KEY`
 </script>
 ```
 
-To be like.
+How it should look:
 
 ![Inject Ghost Custom integrations Content API Key](https://d33wubrfki0l68.cloudfront.net/d92bcb8fe79ebd91623fdd56cd834bce2ad9f0fd/ba80e/images/docs/ghost/shared/custom-integrations/inject.png)
 
