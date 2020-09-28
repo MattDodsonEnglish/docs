@@ -1,6 +1,6 @@
 To edit the theme files mentioned here, use your text editor of choice. For example, you can use [Visual Studio Code ↗](https://code.visualstudio.com/) or [Sublime Text ↗](https://www.sublimetext.com/).
 
-Once finished your changes, **zip** the theme files, and [upload](#theme-installation) the final zip file to Ghost.
+Once you finish making your changes, **zip** the theme files, and [upload](#theme-installation) the final zip file to Ghost.
 
 ---
 
@@ -53,14 +53,14 @@ Once finished your changes, **zip** the theme files, and [upload](#theme-install
 
 ### Theme Installation
 
-The first step is to *unzip* the downloaded package. You will find the actual theme inside and a documentation file. Do the following steps to upload the theme to your blog.
+The first step is to unzip the downloaded package. Inside, you will find the zipped theme and a documentation file. Upload the theme to your blog with the following steps:
 
-* Log in to your Ghost website admin (*example.com/ghost*)
-* In the left-side menu of your admin click **Design**
-* Scroll down to the **INSTALLED THEMES** section
-* Click **Upload a theme**
-* Select the theme file (*krabi.zip*)
-* Once uploaded, click on **Activate now** to activate the theme immediately or **Close** if you want to activate it later
+1. Log in to your Ghost website admin (*example.com/ghost*)
+2. In the left-side menu of your admin, click **Design**
+3. Scroll down to the **INSTALLED THEMES** section
+4. Click **Upload a theme**
+5. Select the theme file (*krabi.zip*)
+6. Once uploaded, click on **Activate now** to activate the theme immediately. If you want to activate it later, click **Close**.
 
 ---
 
