@@ -119,9 +119,9 @@ To upload the file, follow these steps:
 
 ### Members / Subscription
 
-Make sure to [Upload the routes.yaml File](#upload-the-routesyaml-file).
+Make sure to [Upload the `routes.yaml` file](#upload-the-routesyaml-file).
 
-Subscribers can be enabled via a checkbox on the **Labs** page (`Labs > MEMBERS (BETA)`), in your Ghost admin panel:
+Enable subscribers by checking the **Enable members** checkbox on the **Labs** page in your Ghost admin panel(`Labs > MEMBERS (BETA)`):
 
 ![enable subscribers](https://d33wubrfki0l68.cloudfront.net/2903312ada3f12d49f1d15c29cfbf324cf4ed3ae/4fcd3/images/docs/ghost/shared/enable-members.png)
 
@@ -130,31 +130,31 @@ Once enabled, different parts of the theme will appear:
 - Login In and Subscribe buttons in the header
 - Sidebar and Footer subscription forms
 - Post page subscription form
-- Call to action section in Post page to encourage visitors to subscribe if the post is set to Members only
+- a Call to action section in Post page to encourage visitors to subscribe if the post is set to Members only.
 
 If the user is already logged in, all the forms will be hidden automatically.
 
 ---
 
-#### Edit Plans Features
+#### Edit Plan Features
 
-To edit each plan features, edit the `partials/member-plans.hbs` file.
+To edit plan features, edit the `partials/member-plans.hbs` file. 
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/ad03e3379c817808600d2d2a8bd2bff4aa09d24b/e2241/images/docs/ghost/krabi/plans.png)
 
-The free plan column will be visible to non logged in users when they visite the [`/subscribe/`](http://krabi.aspirethemes.com/subscribe/) page.
+The free plan column will be visible to guest users when they visit the [`/subscribe/`](http://krabi.aspirethemes.com/subscribe/) page.
 
-To remove this column, open the `partials/member-plans.hbs` file and remove lines from `2` to `17`.
+To remove this column, open the `partials/member-plans.hbs` file and remove lines `2` to `17`.
 
 ---
 
-If the user clicked the free plan button, he will be directed to the [`/signup/`](http://krabi.aspirethemes.com/signup/) page with an email and subscribe button.
+Clicking the free plan button will direct the user to the [`/signup/`](http://krabi.aspirethemes.com/signup/) page with an email and subscribe button.
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/2cab85bf195391d81bd116d8aabf2dc70fead2c8/45565/images/docs/ghost/krabi/signup-free.png)
 
 ---
 
-If the user is logged and is trying to subscribe to a plan from his account page, the monthly and yearly plans will be only available.
+If logged-in users try to subscribe to a plan from their account page, only the monthly and yearly plans will be displayed.
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/caf957b1c8e2b1f54a0bdb993da57f8e20f035c2/1c326/images/docs/ghost/krabi/plans-compact.png)
 
@@ -162,16 +162,16 @@ If the user is logged and is trying to subscribe to a plan from his account page
 
 #### Remove ‘Log In’ and ‘Subscribe’ from Header
 
-Open the `partials/header.hbs` file and remove lines from `30` to `38`.
+Open the `partials/header.hbs` file and remove lines `30` to `38`.
 
 ---
 
 #### Membership Troubleshooting Tips
 
-If for any reason the subscribe form does not work or there is an error message, you may check out the following tips:
+If for any reason the subscribe form does not work or there is an error message, the following tips might help:
 
 - If you are self-hosting your website, make sure to set up the [mail config](https://ghost.org/docs/concepts/config/#mail). After doing that, restart your Ghost server.
-- The website config URL should match the URL used to access the website. As described in the [Ghost docs](https://ghost.org/docs/concepts/config/#url).
+- The website config URL should match the URL used to access the website, as described in the [Ghost docs](https://ghost.org/docs/concepts/config/#url).
 
 *Enter the URL that is used to access your publication. If using a subpath, enter the full path, `https://example.com/blog/`. If using SSL, always enter the URL with `https://`.*
 
