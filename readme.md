@@ -90,7 +90,7 @@ Add the following code to the **Site Header** box after replacing the *`API_KEY`
 </script>
 ```
 
-How it should look:
+It should look like this:
 
 ![Inject Ghost Custom integrations Content API Key](https://d33wubrfki0l68.cloudfront.net/d92bcb8fe79ebd91623fdd56cd834bce2ad9f0fd/ba80e/images/docs/ghost/shared/custom-integrations/inject.png)
 
@@ -100,20 +100,20 @@ Click **Save**.
 
 ### Upload the routes.yaml File
 
-The `routes.yaml` file is required for members sign up and subscription flows.
+The `routes.yaml` file is required for member sign up and subscription flows.
 
-To upload the file.
+To upload the file, follow these steps:
 
-- Go to the Ghost admin **Labs** settings page (`/#/settings/labs`)
-- Scroll down to the **Routes** section and click the **Upload routes YAML** button
-- Select and upload the `routes.yaml` file inside the theme zip file
+1. Go to the Ghost admin **Labs** settings page (`/#/settings/labs`)
+2. Scroll down to the **Routes** section and click the **Upload routes YAML** button
+3. Select and upload the `routes.yaml` file inside the theme zip file
 
-![Upload a routes file in Ghost](https://d33wubrfki0l68.cloudfront.net/8297fc840444d57d5ea249cc43f7cd349049f0fb/59cc6/images/docs/ghost/shared/upload-routes.pngg)
+![Upload a routes file in Ghost](https://d33wubrfki0l68.cloudfront.net/8297fc840444d57d5ea249cc43f7cd349049f0fb/59cc6/images/docs/ghost/shared/upload-routes.png)
 
-#### Note
+#### Note: upload `routes.yaml` after uploading the theme zip
 
-- You need to upload the `routes.yaml` separately. Uploading the theme zip file is not enough.
-- There is already a `routes.yaml` file uploaded to Ghost. This is the default one that comes with Ghost. We need to upload the theme one to override it.
+- Uploading the theme zip file isn't enough. You'll need to upload `routes.yaml` separately. 
+- There will already be a `routes.yaml` file uploaded to Ghost. This is the default one that comes with Ghost. We need to upload the theme one to override it.
 
 ---
 
