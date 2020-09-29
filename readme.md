@@ -183,9 +183,9 @@ For more information about Members, connecting Stripe, and setting the package p
 
 ### RTL
 
-RTL means (Right to Left), so the theme can show content in languages that are written from right to left like Arabic or Hebrew.
+*RTL* means right to left. RTL lets the theme can show content in languages that are written from right to left, like Arabic or Hebrew.
 
-To enable the RTL version, open the `default.hbs` file and change line ***10*** to be `{{> compiled/inline-css-rtl }}`.
+To enable the RTL version, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
 
 ![Krabi Ghost Theme Activate RTL](https://d33wubrfki0l68.cloudfront.net/44f2a8200f9544cfd5dd36c75e62378a0f38cc16/d57cd/images/docs/ghost/shared/inline-css-rtl.png)
 
@@ -195,15 +195,15 @@ Save the file and upload the theme to your Ghost blog.
 
 ### Navigation
 
-You can add, edit, delete, and reorder menu links on your Ghost blog from the Navigation section in the admin area located at `ghost/#/settings/design`.
+You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area located at `ghost/#/settings/design`.
 
 ![Ghost navigation menu](https://d33wubrfki0l68.cloudfront.net/feae47e5c4b5855f19a193b572a72946ab6fe06c/f91da/images/docs/ghost/shared/navigation.png)
 
-To include a static page on your navigation menu. First, type the name of the page as you'd like it to appear on your menu in the label field.
+Follow these steps to include a static page on your navigation menu. First, type the name of the page as you'd like it to appear on your menu in the label field.
 
 ![Ghost label field](https://d33wubrfki0l68.cloudfront.net/9763dfb165f2472dc7606232b0d651c421ae44bc/35266/images/docs/ghost/shared/label-field.png)
 
-Next, click on the **URL** field of the menu item and we can find that the blog URL is already auto-populate for us. We will need to add the page slug after the final **/**. Once satisfied with our page configurations. Clicking the blue **Save** button will add the page to the navigation menu.
+Next, click on the **URL** field of the menu item. You'll see that the blog URL is already auto-populated. Add the page slug after the final **/**. When your satisfied with your page configurations, Click the blue **Save** button to add the page to the navigation menu.
 
 ---
 
@@ -213,9 +213,9 @@ The tags menu will automatically show all the blog tags in alphabetical order.
 
 ![Krabi Tags Menu](https://d33wubrfki0l68.cloudfront.net/ffa0a0d5de95c2b0703d2b124eec4eea9e17da71/6b4b5/images/docs/ghost/krabi/tags-menu.png)
 
-If you want to remove the **Latest** tab, open the `partials/tags-list.hbs` file and remove lines from `7` to `9`.
+If you want to remove the **Latest** tab, open the `partials/tags-list.hbs` file and remove lines `7` to `9`.
 
-If you want to remove this entire tags list, open the `default.hbs` and `default-wide.hbs` files and remove line `12` from both of them.
+If you want to remove the entire tags list, open the `default.hbs` and `default-wide.hbs` files and remove line `12` from both of them.
 
 ---
 
