@@ -240,7 +240,7 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 ### Tags Page
 
 To create the Tags page:
-1. From the Ghost admin **Pages** section, create a new page. Give it a title, for example "Tags."
+1. From the Ghost admin **Pages** section, create a new page and give it a title, like "Tags."
 2. From **Page settings**, select the **Tags** template.
 3. Publish the page.
 4. To add the page to the navigation, please check the [Navigation](#navigation) section above.
@@ -257,7 +257,7 @@ If you are self-hosting your website, you may need to do a server restart. This 
 
 To create the Authors page:
 
-1. Create a new page and give it a title, for example "Authors."
+1. Create a new page and give it a title, like "Authors."
 2. From **Page settings**, select the **Authors** template.
 3. Publish the page
 4. To add the page to the navigation, please check the [Navigation](#navigation) section above
@@ -274,10 +274,10 @@ If you are self-hosting your website, you may need to do a server restart. This 
 
 To create the Contact page:
 
-- Create a new Page and call it **Contact** for example
-- Add your content and the contact form code using [FORMSPREE](https://formspree.io/) as a service. Please check the code example below
-- Publish the page
-- To add the page to the navigation, please check the [Navigation](#navigation) section above
+1. Create a new Page and give it a title, like "Contact."
+2. Add your content and the contact form code using [FORMSPREE](https://formspree.io/) as a service. Please check the code example below.
+3. Publish the page.
+4. To add the page to the navigation, please check the [Navigation](#navigation) section above
 
 ```html
 <form action="https://formspree.io/your@email.com" method="POST">
@@ -294,7 +294,7 @@ For more information, check the [How to Add a Contact Form to Your Ghost Blog](h
 
 ### Disqus Comments
 
-Open `partials/disqus.hbs` file. Change the `aspirethemes-demos` value for the `disqus_shortname` variable to match your Disqus account shortname.
+Open the `partials/disqus.hbs` file. Change the `aspirethemes-demos` value for the `disqus_shortname` variable to match your Disqus account shortname.
 
 ```js
 var disqus_shortname = 'aspirethemes-demos';
