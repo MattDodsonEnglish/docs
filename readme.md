@@ -183,7 +183,7 @@ For more information about Members, connecting Stripe, and setting the package p
 
 ### RTL
 
-*RTL* means right to left. RTL lets the theme can show content in languages that are written from right to left, like Arabic or Hebrew.
+*RTL* means right to left. Turning on RTL lets the theme show content in languages that are written from right to left, like Arabic or Hebrew.
 
 To enable the RTL version, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
 
@@ -203,7 +203,7 @@ Follow these steps to include a static page on your navigation menu. First, type
 
 ![Ghost label field](https://d33wubrfki0l68.cloudfront.net/9763dfb165f2472dc7606232b0d651c421ae44bc/35266/images/docs/ghost/shared/label-field.png)
 
-Next, click on the **URL** field of the menu item. You'll see that the blog URL is already auto-populated. Add the page slug after the final **/**. When your satisfied with your page configurations, Click the blue **Save** button to add the page to the navigation menu.
+Next, click on the **URL** field of the menu item. You'll see that the blog URL is already auto-populated. Add the page slug after the final **/**. When you're satisfied with your page configurations, click the blue **Save** button to add the page to the navigation menu.
 
 ---
 
