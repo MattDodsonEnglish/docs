@@ -294,7 +294,7 @@ For more information, check the [How to Add a Contact Form to Your Ghost Blog](h
 
 ### Disqus Comments
 
-Open the `partials/disqus.hbs` file. Change the `aspirethemes-demos` value for the `disqus_shortname` variable to match your Disqus account shortname.
+Open the `partials/disqus.hbs` file. Replace the `aspirethemes-demos` value with the `DISQUS_SHORTNAME` variable to match your Disqus account shortname.
 
 ```js
 var disqus_shortname = 'aspirethemes-demos';
@@ -306,21 +306,21 @@ So, if your Disqus shortname is `exampleone`, the final code above should be:
 var disqus_shortname = 'exampleone';
 ```
 
-That’s all you need to set up Disqus from the theme side. If you get any issue that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide)
+From the theme side, that’s all you need to set up Disqus. If you have any issues with comments not loading, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
 
-And also check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
+ If you still have issues, check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22).
 
 ---
 
 #### Disable Disqus
 
-If you want to disable Disqus comments. Open the `post.hbs` file and comment or delete the line contains the `{{> disqus}}` text (line `40`).
+To disable Disqus comments, open the `post.hbs` file and comment or delete the line containing the `{{> disqus}}` text (line `40`).
 
 ---
 
 #### Show Comments for Signed-in Users Only
 
-If you want to show the comments for signed-in users only, open the `post.hbs` file and replace line `40` (`{{> disqus}}`) replace with the following code.
+If you want show comments for only signed-in users, open the `post.hbs` file and replace line `40` (`{{> disqus}}`) with the following code.
 
 ```html
 {{#if @labs.members}}
@@ -336,19 +336,19 @@ You can read more about Ghost visibility choices at [Content visibility](https:/
 
 #### CommentBox Comments
 
-To enable [CommentBox](https://commentbox.io) as a comments system, open `post.hbs` file and replace line *40* replace with `{{> commentbox}}`.
+To enable [CommentBox](https://commentbox.io) as a comments system, open `post.hbs` file and replace line `40` replace with `{{> commentbox}}`.
 
-The next step is to create a commentbox account and then from the dashboard, create a new project by filling your site information, and then you will receive a *Project ID*.
+The next step is to create a commentbox account. From the dashboard, create a new project by filling your site information. You will then receive a *Project ID*.
 
-Copy that *Project ID* and open `partials/commentbox.hbs` file and replace it with the `my-project-id` value. That's it.
+Copy that *Project ID*, open the `partials/commentbox.hbs` file, and replace the `my-project-id` value with it. That's it.
 
 ---
 
 #### Commento Comments
 
-To enable [Commento](https://commento.io) as a comments system, open `post.hbs` file and replace line *40* replace with `{{> commento}}`.
+To enable [Commento](https://commento.io) as a comments system, open the `post.hbs` file and replace line `40` with `{{> commento}}`.
 
-The next step is to create a Commento account and then [register your domain](https://docs.commento.io/installation/self-hosting/register-your-website/) with it.
+The next step is to create a Commento account and [register your domain](https://docs.commento.io/installation/self-hosting/register-your-website/) with it.
 
 ---
 
