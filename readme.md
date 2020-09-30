@@ -195,7 +195,7 @@ Save the file and upload the theme to your Ghost blog.
 
 ### Navigation
 
-You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area located at `ghost/#/settings/design`.
+You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area located at **ghost/#/settings/design**.
 
 ![Ghost navigation menu](https://d33wubrfki0l68.cloudfront.net/feae47e5c4b5855f19a193b572a72946ab6fe06c/f91da/images/docs/ghost/shared/navigation.png)
 
@@ -221,7 +221,7 @@ If you want to remove the entire tags list, open the `default.hbs` and `default-
 
 ### Secondary Footer Navigation
 
-Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at `ghost/#/settings/design`.
+Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at **ghost/#/settings/design**.
 
 ---
 
@@ -239,11 +239,11 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 
 ### Tags Page
 
-To create the Tags page:
-- From the Ghost admin `Pages` section, create a new page and call it **Tags** for example
-- From `Page settings`, choose the `Tags` template from the `Template` dropdown
-- Publish the page
-- To add the page to the navigation, please check the [Navigation](#navigation) section above
+To create a Tags page:
+1. From the Ghost admin **Pages** section, create a new page. Give it a title, for example "Tags."
+2. In **Page settings**, select the **Tags** template.
+3. Publish the page.
+4. To add the page to the navigation, please check the [Navigation](#navigation) section above.
 
 ![Ghost Tags Page](https://d33wubrfki0l68.cloudfront.net/450bd467288a88b5b03edeaa1ea1c7845153a820/d0089/images/docs/ghost/shared/tags-page.png)
 
