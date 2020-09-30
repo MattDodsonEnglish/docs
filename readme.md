@@ -27,6 +27,7 @@ Once you finish making your changes, **zip** the theme files, and [upload](#them
 - [Article Page Author](#article-page-author)
 - [Posts Per Page](#posts-per-page)
 - [Syntax Highlighting](#syntax-highlighting)
+- [Prism](#prism)
 - [Related Posts](#related-posts)
 - [Google Analytics](#google-analytics)
 - [Responsive Tables](#responsive-tables)
@@ -354,29 +355,25 @@ The next step is to create a Commento account and [register your domain](https:/
 
 ### Sidebar Authors
 
-The sidebar Authors section shows `3` authors ordered by posts count.
+The sidebar **Authors** section shows 3 authors ordered by post count.
 
 To remove this section, open the `partials/sidebar.hbs` file and remove line `8` (`{{> sidebar-authors }}`).
 
 ---
 
-### Article Page Author
+### Article Author
 
-The Article page will show the Author info in two places.
+The Article page will show Author info in two places.
 
-1. The top header under the title and near the social sharing icons.
+* The top header under the title and near the social sharing icons. To remove, open the `partials/post-header.hbs` file and remove lines `16` to `24` and lines `26` to `27`.
 
-To remove this, open the `partials/post-header.hbs` file and remove lines from `16` to `24` and lines from `26` to `27`.
-
-2. Under the blog article content.
-
-To remove this, open the `post.hbs` file and remove lines from `23` to `25`.
+* Under the blog article content. To remove, open the `post.hbs` file and remove lines `23` to `25`.
 
 ---
 
 ### Posts Per Page
 
-You can control how many posts to show per page from the `package.json` file like this:
+You can control how many posts display per per page from the `package.json` file.
 
 ```js
 "config": {
@@ -402,7 +399,7 @@ pre {
 ```
 </pre>
 
-Will produce the following gray look:
+This will produce the following gray look:
 
 ![Krabi Ghost Theme Syntax Highlighting](https://d33wubrfki0l68.cloudfront.net/88580a906fc67c5523b816d32ddd7405bfaacfdc/cc565/images/docs/ghost/krabi/syntax-highlighting-raw-output.png)
 
@@ -418,21 +415,20 @@ pre {
 ```
 </pre>
 
-Will produce the following colored look:
+This will produce the following colored look:
 
 ![Krabi Ghost Theme Syntax Highlighting with prismjs](https://d33wubrfki0l68.cloudfront.net/0a46470bb950613ebefc3b896350ed96ac449b7e/3eb25/images/docs/ghost/krabi/syntax-highlighting-colored-output.png)
 
-To add an **inline code**, you can wrap the text between two backticks <code>` `</code>, for example:
-
-This inline code example `absolute="true"`
-
-Will produce the following look:
+To add **inline code**, wrap the text between two backticks <code>` `</code>.
+For example, this inline code `absolute="true"` will produce the following look:
 
 ![Krabi Ghost Theme Syntax Highlighting with prismjs](https://d33wubrfki0l68.cloudfront.net/7fea70125c63218db16b69acdd6d9a06ef308a92/a8d81/images/docs/ghost/krabi/syntax-highlighting-inline-output.png)
 
 ---
 
-Krabi shipped with [Prism.js](http://prismjs.com/), a lightweight, robust, and elegant syntax highlighter.
+### Prism
+
+Krabi ships with [Prism.js](http://prismjs.com/), a lightweight, robust, and elegant syntax highlighter.
 
 The [initial Prism package](http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) includes some languages like *Markup*, *CSS*, *C-like*, and *JavaScript*.
 
