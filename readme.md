@@ -430,17 +430,15 @@ For example, this inline code `absolute="true"` will produce the following look:
 
 Krabi ships with [Prism.js](http://prismjs.com/), a lightweight, robust, and elegant syntax highlighter.
 
-The [initial Prism package](http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) includes some languages like *Markup*, *CSS*, *C-like*, and *JavaScript*.
+The [initial Prism package](http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) includes some languages, like *Markup*, *CSS*, *C-like*, and *JavaScript*.
 
-You can add and support more languages. For example, to add support for PHP:
-
-Get the PHP component script from [Prism CDN](https://cdnjs.com/libraries/prism).
+You can support more languages. For example, to add support for PHP, get the PHP component script from [Prism CDN](https://cdnjs.com/libraries/prism).
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/components/prism-php.js"></script>
 ```
 
-Add the script to Ghost **Code Injection** *Site Footer* section. Click the **Save** button.
+From the side admin menu, go to **Code Injection** and add the script to the **Site Footer** section. Be sure to click **Save**.
 
 ![Krabi Ghost Theme Syntax Highlighting Code Injection PHP Prism](https://d33wubrfki0l68.cloudfront.net/ae7c8002ea613fca55f21ad0823cda41dc83dec3/a288c/images/docs/ghost/shared/syntax-highlighting-code-injection.png)
 
@@ -448,21 +446,21 @@ Add the script to Ghost **Code Injection** *Site Footer* section. Click the **Sa
 
 ### Related Posts
 
-Related posts will be visible on the single post in case there are similar posts sharing the same tags.
+If there are similar posts sharing the same tags, related posts will be visible at the bottom of a post.
 
-Enabling the [Public API](#enable-the-ghost-public-api) required.
+Enabling the [Public API](#enable-the-ghost-public-api) is required.
 
 ---
 
 ### Google Analytics
 
-To integrate Google Analytics, I would recommend using [Google Analytics](https://ghost.org/integrations/google/) integration by Ghost.
+To integrate Google Analytics, I recommend using the [Google Analytics](https://ghost.org/integrations/google/) integration by Ghost.
 
 ---
 
 ### Responsive Tables
 
-Responsive tables are required and essential for adding tabular content and allows tables to be scrolled horizontally. You can make any table responsive across all viewports by wrapping a `table` with `.responsive-table`, for example:
+Responsive tables are required and essential for adding tabular content and allowing tables to be scrolled horizontally. You can make any table responsive across all viewports by wrapping a `table` with `.responsive-table`, for example:
 
 ```html
 <div class='responsive-table'>
@@ -476,19 +474,19 @@ Responsive tables are required and essential for adding tabular content and allo
 
 ### Social Sharing Icons
 
-You can customize and update the post social media sharing icons from the `partials/share.hbs` theme file.
+You can customize and update a post's social media sharing icons from the `partials/share.hbs` theme file.
 
 ---
 
 ### Sidebar Social Media Icons
 
-Sidebar social media links placed in the `partials/sidebar-social-icons.hbs` file.
+Sidebar social media links are placed in the `partials/sidebar-social-icons.hbs` file.
 
 The Ghost CMS supports adding Facebook and Twitter profile URLs from the admin panel. Go to **General > Social accounts** and add your URLs. This will update Facebook and Twitter URLs within the footer social media section.
 
 ![social-accounts](https://d33wubrfki0l68.cloudfront.net/3e76f93de7ae6b06126c7686e706673ec8ccac65/bdc4e/images/docs/ghost/shared/social-accounts.png)
 
-For using other social accounts, the theme is using [Evil Icons](http://evil-icons.io/) to provide very simple and clean icons. Here you can find a list of the social media icons to use:
+For other social accounts, the theme use [Evil Icons](http://evil-icons.io/) to provide very simple and clean icons. Here you can find a list of the social media icons to use:
 
 Facebook
 
@@ -574,7 +572,7 @@ Youtube
 <span data-icon='ei-sc-youtube' data-size='s'></span>
 ```
 
-To edit or update other existed and static social links, for example, the Instagram code block:
+Edit or update your social links in the `partials/sidebar-social-icons.hbs`  file. For example, here's the Instagram code block:
 
 ```html
 <li class='c-social-icons__item'>
@@ -586,13 +584,13 @@ To edit or update other existed and static social links, for example, the Instag
 
 The code above contains the ICON code from the above list, the social media link (`a`) within a list element (`li`).
 
-Next, replace your Instagram full URL with the link `href` value so if your Instagram URL is:
+Next, replace your Instagram full URL with the link `href` value. If your Instagram URL is:
 
 ```html
 https://www.instagram.com/ghost/
 ```
 
-the new code will be:
+Then the new code will be:
 
 ```html
 <li class='c-social-icons__item'>
@@ -608,7 +606,7 @@ If you want to completely remove Instagram, you can delete all the code block, t
 
 ### Update Favicon
 
-You can change the favicon in Ghost from the *Admin > General > PUBLICATION IDENTITY > Publication icon* from the Publication icon section.
+You can change the favicon in Ghost from the **Admin > General > PUBLICATION IDENTITY > Publication icon**.
 
 ![Update Ghost CMS favicon](https://d33wubrfki0l68.cloudfront.net/82380d584ef2c6cece40ca86f743915e0b192572/e48dd/images/docs/ghost/shared/update-favicon.png)
 
@@ -616,9 +614,9 @@ You can change the favicon in Ghost from the *Admin > General > PUBLICATION IDEN
 
 ### Theme Translation
 
-Krabi supports [Ghost i18n](https://themes.ghost.org/docs/i18n) and comes with **German**, **Italian**, **Spanish**, **French** **Finnish**, **Portuguese** **Dutch**, **Turkish** and **Danish** translation.
+Krabi supports [Ghost i18n](https://themes.ghost.org/docs/i18n) and comes with **German**, **Italian**, **Spanish**, **French** **Finnish**, **Portuguese** **Dutch**, **Turkish** and **Danish** translations.
 
-To use another available language than English, go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the [*ISO Code*](https://www.w3schools.com/tags/ref_language_codes.asp).
+To use an available language other than English, go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the [*ISO Code*](https://www.w3schools.com/tags/ref_language_codes.asp).
 
 - `da` for Danish
 - `de` for Germany
@@ -635,19 +633,19 @@ To use another available language than English, go to **Admin > General > PUBLIC
 
 ---
 
-#### Add New Language
+#### Add a New Language
 
-To add a new language, follow the following steps:
+To add a new language, follow these steps.
 
-- Create a new file under the theme `locales` folder with the language [ISO Code](https://www.w3schools.com/tags/ref_language_codes.asp) code. So, if the new language will be Arabic, the new file name will be `ar.json`
-- Copy the `en.json` file content into your new file and start to translate as shown in the following section
-- Go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the language code which will be `ar` in this example
+1. Create a new file in the theme's `locales` folder with the language [ISO Code](https://www.w3schools.com/tags/ref_language_codes.asp) code. So, if the new language is Arabic, the new file name will be `ar.json`.
+2. Copy the `en.json` file content into your new file and start to translate as shown in the following section.
+3. Go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the language code (`ar` in this example).
 
 ---
 
-#### Edit Translation
+#### Edit a Translation
 
-To improve or edit a translation in a specific available language. You can open the language file under `locales` folder:
+To improve or edit a translation in a specific available language, you can open the language file in the `locales` folder:
 
 ```sh
 |____locales
@@ -663,7 +661,7 @@ To improve or edit a translation in a specific available language. You can open 
 | |____tr.json
 ```
 
-For example, the Germany translation file will look like:
+For example, the German translation file looks like this:
 
 ```json
 {
@@ -747,11 +745,11 @@ For example, the Germany translation file will look like:
 }
 ```
 
-Each line consists of a left key (`"More Posts"`) and the right value (`"Mehr Artikel"`).
+Each line consists of a left key (`"More Posts"`) and a right value (`"Mehr Artikel"`).
 
-The key is plain English which exists in all translation files and **should not be** changed. You can only change the value.
+The key is plain English that exists in all translation files and **should not be** changed. You should change only the value.
 
-If you have suggestions to improve the current translations or adding a new language. Please <a href='{{ site.mailto }}'>let me know</a>.
+If you have any suggestions to improve a current translations or add a new language, please <a href='{{ site.mailto }}'>let me know</a>.
 
 ---
 
@@ -761,13 +759,14 @@ Krabi comes integrated with the amazing [Deploy Ghost Theme ↗](https://github.
 
 ![Krabi GitHub Actions](https://d33wubrfki0l68.cloudfront.net/471c52f5a99f853040e5334838c18dafc6a8f829/d792f/images/docs/ghost/krabi/github-actions.png)
 
-I have written about this at [How to Deploy Your Ghost Theme Using Github Actions ↗](https://aspirethemes.com/blog/deploy-ghost-theme). All you need to do it to follow steps **1** and **2**.
+I have written about this at [How to Deploy Your Ghost Theme Using Github Actions ↗](https://aspirethemes.com/blog/deploy-ghost-theme). All you need to do is follow steps **1** and **2**.
 
 ---
 
 ### Theme Development
 
-If you are a developer and need to do heavy customization work. The theme is using [Gulp](https://github.com/gulpjs/gulp) to compile [Sass](http://sass-lang.com/) and JavaScript. This improves the development flow and makes it much faster.
+If you are a developer and need to do heavy customization work, the theme uses
+[Gulp](https://github.com/gulpjs/gulp) to compile [Sass](http://sass-lang.com/) and JavaScript. This improves the development flow and makes it much faster.
 
 #### Note
 
@@ -787,20 +786,21 @@ To start Gulp, run:
 gulp
 ```
 
-This will compile Sass and JavaScript files, and start watching changes as you edit files.
+This will compile Sass and JavaScript files, and start marking changes as you edit files.
 
 Gulp will produce two files:
 
 - `assets/js/app.min.js`: The final main JavaScript file
 - `partials/compiled/inline-css.hbs`: The final CSS file
 
-It's recommended to avoid editing these files if you are working with Gulp. Instead, do customizations in `assets/sass` files for CSS or in `assets/js/app.js` for JavaScript. So, we can make sure the flow is going in the right direction and we never lost any changes.
+ If you are working with Gulp, it's recommended you avoid editing these files. Instead, do customizations in `assets/sass` for CSS or in `assets/js/app.js`
+ JavaScript. This way you can make sure the flow is going in the right direction and never lose any changes.
 
 ---
 
 #### My Current Setup
 
-In case you are wondering what my current environment set up is. The packages version I use, check the following.
+In case you are wondering what my current environment set up is, and which package versions I use, take a look at the following.
 
 ```bash
 $ node -v
@@ -819,7 +819,7 @@ Local version: 4.0.2
 
 This environment works well for running Ghost and also for theme development.
 
-I'm using macOS.
+I'm use macOS.
 
 ---
 
@@ -842,7 +842,7 @@ Another choice for customization is to use the Ghost **Code Injection** settings
 
 Using [Code Injection](#code-injection), you can change the theme colors with CSS Variables.
 
-For the list of the available theme color variables, check out the `assets/sass/settings/colors.scss` theme file and it will be like the following.
+For the list of available theme color variables, check out the `assets/sass/settings/colors.scss` theme file. It will look like this:
 
 ```css
 :root {
@@ -866,7 +866,7 @@ For the list of the available theme color variables, check out the `assets/sass/
 }
 ```
 
-If you want for example to change the theme brand color and in this case, it will be `#5869DA`. You can copy the color variable to *Code Injection (Site Header)* and assign it with your new color like the following example.
+For example, if you wanted to change the theme's brand color, you'd change  `#5869DA` in this case. You can copy the color variable to **Code Injection > Site Header** and assign it your new color, as in the following example.
 
 ```html
 <style>
@@ -880,9 +880,11 @@ The result will be.
 
 ![Krabi Ghost Theme Changing Colors with CSS Variables](https://d33wubrfki0l68.cloudfront.net/f198fd98d9ad212631534236ecc9e2ab3bd7df50/025d6/images/docs/ghost/krabi/color-variables-change.png)
 
-The color brand is used for buttons, links color, and links hover. In the above example, we changed the color to be `red`. You can override this for any other variable.
+The color brand is used for buttons, links color, and link hovers. In the above example, we changed the color to be `red`. You can override this for any other variable.
 
-If, for example, you want to add another color that is not available in the available theme variables and wants to add another style to a new element. You can create a new variable and give it a name and value.
+If, for example, you want to add a color that's not in the available theme 
+variables, or add another style to a new element, you can create a new 
+variable and give it a name and value.
 
 We can extend the previous example to add a new color for the logo color and assign that variable to the `.c-logo__link` class.
 
@@ -903,11 +905,11 @@ The logo will then have a `blue` color.
 
 ![Krabi Ghost Theme Changing Colors with CSS Variables](https://d33wubrfki0l68.cloudfront.net/f45fb8685c4a862c4bad944312598f45777e1506/267a7/images/docs/ghost/krabi/color-variables-change-logo.png)
 
-#### Customize Images Height
+#### Customize Image Height
 
-If you want to customize the height of the images on the home page and on the post page, you can use the following CSS code.
+If you want to customize the height of the images on the home page or on the post page, you can use the following CSS code.
 
-For the single post image. The theme default value is `56.25%`. You can change this value to match your preference.
+For a single post image, the theme default value is `56.25%`. You can change this value to match your preference.
 
 ```css
 .c-post-image-wrap:after {
@@ -915,7 +917,7 @@ For the single post image. The theme default value is `56.25%`. You can change t
 }
 ```
 
-For the homepage cards. The theme default value is also `56.25%`.
+For the homepage cards, the theme default value is also `56.25%`.
 
 ```css
 .c-post-card__image-wrap {
@@ -941,7 +943,7 @@ The full code in [Code Injection](#code-injection) would be:
 
 #### Customize Logo Size
 
-If you are using an image as a logo instead of the site name and want to change the logo size you can use the following code.
+If you are using an image as a logo instead of the site name and want to change the logo size, you can use the following code.
 
 ```html
 <style>
@@ -951,7 +953,7 @@ If you are using an image as a logo instead of the site name and want to change 
 </style>
 ```
 
-The default value is `96px`, so you can increase this value to match your preference. If the loge image has a large white space around, make sure you trim that space to get good results.
+The default value is `96px`, so you can increase this value to match your preference. If the loge image has a large white space around it, make sure you trim that space to get good results.
 
 ---
 
@@ -959,16 +961,16 @@ The default value is `96px`, so you can increase this value to match your prefer
 
 [![akash.at Post Content Center](https://d33wubrfki0l68.cloudfront.net/8b45d2c417a3b3f3c8fc635ee7b6e2f78ad107d7/d454b/images/docs/ghost/krabi/akash-post-center.png)](https://akash.at/how-coin-master-reimagined-slots/)
 
-The method is being used at [akash.at ↗](https://akash.at/how-coin-master-reimagined-slots/)
+An example of the method at [akash.at ↗](https://akash.at/how-coin-master-reimagined-slots/)
 
-To make the blog post content to be centered and remove the sidebar, you can do the following two steps.
+To center the blog post content and remove the sidebar, follow these steps.
 
-1. Duplicate the `default.hbs` file and give it another name, for example, `default-post.hbs`. Then, remove lines from `19` to `21`.
+1. Duplicate the `default.hbs` file and give it another name, for example, `default-post.hbs`. Then, remove lines `19` to `21`.
 2. In the `post.hbs` file, change the first line to `{{!< default-post}}`.
 
-That’s all that you need to do and the post will be centered automatically.
+That’s all that you need to do. The post will be centered automatically.
 
-In case you want to add a wide and full-width style to images, you can add the following CSS code to [Code Injection](#code-injection) *(Site Header)* section.
+In case you want to add a wide and full-width style to images, you can add the following CSS code to the [Code Injection](#code-injection) **(Site Header)** section.
 
 ```html
 <style>
@@ -995,9 +997,9 @@ In case you want to add a wide and full-width style to images, you can add the f
 
 ---
 
-#### Remove the ‘Public’, ‘Members’ and ‘Paid’ Labels from Post Card
+#### Remove the ‘Public’, ‘Members’ and ‘Paid’ Labels from a Post Card
 
-Open the `partials/post-card.hbs` file and remove lines from `23` to `29`.
+Open the `partials/post-card.hbs` file and remove lines `23` to `29`.
 
 ---
 
@@ -1018,7 +1020,7 @@ To remove the date from all posts, add the following CSS code to Ghost [Code Inj
 
 Click **Save**.
 
-By order, this code will remove the date from the following.
+In order, this code will remove the date from the following:
 
 - Sidebar postcard
 - Home postcard
@@ -1029,7 +1031,7 @@ By order, this code will remove the date from the following.
 
 #### Add New Sidebar Widget
 
-Suppose you want to add a new widget to the sidebar, use the following code as a skeleton for the widget.
+Suppose you want to add a new widget to the sidebar. Use the following code as a skeleton for the widget.
 
 To add it to the sidebar, copy and paste it in the `/partials/sidebar.hbs` theme file before line *9*.
 
@@ -1064,7 +1066,7 @@ If you don't want to add a title, your skeleton should be.
 
 #### Zip Theme Files
 
-To create a clean and small theme package. You can exclude different directories using the following command line:
+To create a clean and small theme package. You can exclude different directories using the following CLI command:
 
 ```sh
 zip -r krabi.zip krabi -x '*node_modules*' '*bower_components*'
@@ -1078,13 +1080,13 @@ If you are [running gulp](#theme-development), you can type the `gulp zip` comma
 
 ### Theme Update
 
-You may be asking: How can I update my theme to the latest theme version?
+You may be wondering: how can I update my theme to the latest theme version?
 
 There are two choices:
 
-- Keep your current theme and only replace the changed files from the new version. You can find the changed files on the theme page [**Changelog**](/changelogs/krabi)
+- Keep your current theme and replace only the changed files from the new version. You can find the changed files on the theme page [**Changelog**](/changelogs/krabi)
 - Or, use the new version as a starting point and redo your theme changes and customizations
 
-One thing to reduce the need for redoing customization is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code for example. So, it's always recommended to keep your custom CSS code with Code Injection.
+One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. So, it's always recommended to keep your custom CSS code with Code Injection.
 
 ---
