@@ -221,7 +221,7 @@ If you want to remove the entire tags list, open the `default.hbs` and `default-
 
 ### Secondary Footer Navigation
 
-Similar to the [Header Navigation](#navigation), we can add the footer navigation from the `SECONDARY NAVIGATION` section in Ghost admin.
+Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at `ghost/#/settings/design`.
 
 ---
 
