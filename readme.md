@@ -227,13 +227,13 @@ Similar to [Header Navigation](#navigation), we can add the footer navigation fr
 
 ### Search
 
-Make sure to [Create a New Content API Key](#create-a-new-content-api-key).
+Make sure to [create a new Content API Key](#create-a-new-content-api-key).
 
 The theme uses [ghostHunter](https://github.com/jamalneufeld/ghostHunter).
 
-Search is done for the Post title and the content. Search only support Posts but not Pages.
+Search goes through the Post title and the content. It supports only Posts, not Pages.
 
-The search supports German, Spanish, French, Portuguese, Italian, Finnish, Dutch, Turkish, and Danish.
+The supported languages are German, Spanish, French, Portuguese, Italian, Finnish, Dutch, Turkish, and Danish.
 
 ---
 
