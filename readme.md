@@ -239,9 +239,9 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 
 ### Tags Page
 
-To create a Tags page:
+To create the Tags page:
 1. From the Ghost admin **Pages** section, create a new page. Give it a title, for example "Tags."
-2. In **Page settings**, select the **Tags** template.
+2. From **Page settings**, select the **Tags** template.
 3. Publish the page.
 4. To add the page to the navigation, please check the [Navigation](#navigation) section above.
 
@@ -249,7 +249,7 @@ To create a Tags page:
 
 #### Note
 
-If you are self-hosting your website, you may need to do a server restart. This will help show up the **Template** dropdown **Tags** option.
+If you are self-hosting your website, you may need to do a server restart. This should get the **Tags** option to show up in the **Template** dropdown.
 
 ---
 
@@ -257,16 +257,16 @@ If you are self-hosting your website, you may need to do a server restart. This 
 
 To create the Authors page:
 
-- Create a new page and call it **Authors** for example
-- From `Page settings`, choose the `Authors` template from the `Template` dropdown
-- Publish the page
-- To add the page to the navigation, please check the [Navigation](#navigation) section above
+1. Create a new page and give it a title, for example "Authors."
+2. From **Page settings**, select the **Authors** template.
+3. Publish the page
+4. To add the page to the navigation, please check the [Navigation](#navigation) section above
 
 ![Ghost Authors Page](https://d33wubrfki0l68.cloudfront.net/a7bf2c78299358d7baf81cd1954dfa361dce1449/a9e44/images/docs/ghost/shared/authors-page.png)
 
 #### Note
 
-If you are self-hosting your website, you may need to do a server restart. This will help show up the **Template** dropdown **Authors** option.
+If you are self-hosting your website, you may need to do a server restart. This should get the **Authors** option to show up in the **Template** dropdown.
 
 ---
 
