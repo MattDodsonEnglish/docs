@@ -77,7 +77,10 @@ To upload the file, follow these steps:
 
 ![Upload a routes file in Ghost](https://d33wubrfki0l68.cloudfront.net/8297fc840444d57d5ea249cc43f7cd349049f0fb/59cc6/images/docs/ghost/shared/upload-routes.png)
 
----
+#### Note: upload `routes.yaml` after uploading the theme zip
+
+There will already be a default `routes.yaml` file uploaded to Ghost. You need to upload your theme's file to override it. This needs to be done separately, after uploading your theme's zip file.
+
 
 ### Create a New Content API Key
 
@@ -97,7 +100,7 @@ A new content API Key will be created. When you hover over it, a **Copy** button
 
 Next, click **Code injection** from the left-side admin menu.
 
-Add the following code to the **Site Header** box after replacing the *`API_KEY`*  value with your API Key.
+After replacing the *`API_KEY`*  value with your API Key, add the following code to the **Site Header** box. 
 
 ```shell
 <script>
@@ -113,12 +116,6 @@ Click **Save**.
 
 ---
 
-#### Note: upload `routes.yaml` after uploading the theme zip
-
-- Uploading the theme zip file won't be enough. You'll need to upload `routes.yaml` separately. 
-- There will already be a `routes.yaml` file uploaded to Ghost. This is the default, which comes with Ghost. We need to upload our theme's file to override the default.
-
----
 
 ### Members / Subscription
 
@@ -1089,6 +1086,6 @@ There are two choices:
 - Keep your current theme and replace only the changed files from the new version. You can find the changed files on the theme page [**Changelog**](/changelogs/krabi)
 - Or, use the new version as a starting point and redo your theme changes and customizations
 
-One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. So, it's always recommended to keep your custom CSS code with Code Injection.
+One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. So, it's always recommengitgded to keep your custom CSS code with Code Injection.
 
 ---
