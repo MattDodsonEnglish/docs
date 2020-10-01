@@ -1,4 +1,4 @@
-To edit the theme files mentioned here, use your text editor of choice. For example, you can use [Visual Studio Code ↗](https://code.visualstudio.com/) or [Sublime Text ↗](https://www.sublimetext.com/).
+Edit the theme files mentioned here with your text editor of choice. For example, you can use [Visual Studio Code ↗](https://code.visualstudio.com/) or [Sublime Text ↗](https://www.sublimetext.com/).
 
 Once you finish making your changes, **zip** the theme files, and [upload](#theme-installation) the final zip file to Ghost.
 
@@ -54,7 +54,7 @@ Once you finish making your changes, **zip** the theme files, and [upload](#them
 
 ### Theme Installation
 
-The first step is to unzip the downloaded package. Inside, you will find the zipped theme and a documentation file. Follow these steps to upload the theme to your blog:
+The first step is to unzip the downloaded package. Inside the new directory `krabi`, you will find the zipped theme and a documentation file. Follow these steps to upload the theme to your blog:
 
 1. Log in to your Ghost website admin (*example.com/ghost*).
 2. In the left-side menu of your admin, click **Design**.
@@ -62,6 +62,20 @@ The first step is to unzip the downloaded package. Inside, you will find the zip
 4. Click **Upload a theme**.
 5. Select the theme file (*krabi.zip*).
 6. Once uploaded, click on **Activate now** to activate the theme immediately. If you want to activate it later, click **Close**.
+
+---
+### Upload the routes.yaml File
+
+The `routes.yaml` file is required for member sign up and subscription flows.
+
+To upload the file, follow these steps:
+
+0. Unzip the `krabi.zip` theme file.
+1. Go to the Ghost admin **Labs** settings page (`/#/settings/labs`).
+2. Scroll down to the **Routes** section and click the **Upload routes YAML** button.
+3. Select and upload the `routes.yaml` file inside the theme zip file.
+
+![Upload a routes file in Ghost](https://d33wubrfki0l68.cloudfront.net/8297fc840444d57d5ea249cc43f7cd349049f0fb/59cc6/images/docs/ghost/shared/upload-routes.png)
 
 ---
 
@@ -98,18 +112,6 @@ It should look like this:
 Click **Save**.
 
 ---
-
-### Upload the routes.yaml File
-
-The `routes.yaml` file is required for member sign up and subscription flows.
-
-To upload the file, follow these steps:
-
-1. Go to the Ghost admin **Labs** settings page (`/#/settings/labs`).
-2. Scroll down to the **Routes** section and click the **Upload routes YAML** button.
-3. Select and upload the `routes.yaml` file inside the theme zip file.
-
-![Upload a routes file in Ghost](https://d33wubrfki0l68.cloudfront.net/8297fc840444d57d5ea249cc43f7cd349049f0fb/59cc6/images/docs/ghost/shared/upload-routes.png)
 
 #### Note: upload `routes.yaml` after uploading the theme zip
 
