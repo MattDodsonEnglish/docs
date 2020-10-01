@@ -27,7 +27,7 @@ Once you finish making your changes, **zip** the theme files, and [upload](#them
 - [Article Page Author](#article-page-author)
 - [Posts Per Page](#posts-per-page)
 - [Syntax Highlighting](#syntax-highlighting)
-- [Prism](#prism)
+  - [Prism](#prism)
 - [Related Posts](#related-posts)
 - [Google Analytics](#google-analytics)
 - [Responsive Tables](#responsive-tables)
@@ -87,7 +87,7 @@ In the left-side menu of your Ghost admin, click **Integrations** then **+ Add c
 
 ![Add new Ghost Custom integrations](https://d33wubrfki0l68.cloudfront.net/9e0d6d92fc0ad220dd8b98b45b5cedd95f72e50e/b642d/images/docs/ghost/shared/custom-integrations/add.png)
 
-Then, give the new integration a name, like "Search", and click **Create**.
+Give the new integration a name, like "Search", and click **Create**.
 
 ![Name for the Ghost Custom integrations](https://d33wubrfki0l68.cloudfront.net/0533efbaff834bcc5b8dbe09a044313d3ecde050/8fcb0/images/docs/ghost/shared/custom-integrations/name.png)
 
@@ -115,8 +115,8 @@ Click **Save**.
 
 #### Note: upload `routes.yaml` after uploading the theme zip
 
-- Uploading the theme zip file isn't enough. You'll need to upload `routes.yaml` separately. 
-- There will already be a `routes.yaml` file uploaded to Ghost. This is the default one that comes with Ghost. We need to upload the theme one to override it.
+- Uploading the theme zip file won't be enough. You'll need to upload `routes.yaml` separately. 
+- There will already be a `routes.yaml` file uploaded to Ghost. This is the default, which comes with Ghost. We need to upload our theme's file to override the default.
 
 ---
 
@@ -124,16 +124,16 @@ Click **Save**.
 
 Make sure to [Upload the `routes.yaml` file](#upload-the-routesyaml-file).
 
-Enable subscribers by checking the **Enable members** checkbox on the **Labs** page in your Ghost admin panel(`Labs > MEMBERS (BETA)`):
+Enable subscribers by checking the **Enable members** checkbox on the **Labs** page in your Ghost admin panel.
 
 ![enable subscribers](https://d33wubrfki0l68.cloudfront.net/2903312ada3f12d49f1d15c29cfbf324cf4ed3ae/4fcd3/images/docs/ghost/shared/enable-members.png)
 
-Once enabled, different parts of the theme will appear:
+Once enabled, different parts of the theme will appear on the website:
 
 - Login In and Subscribe buttons in the header
 - Sidebar and Footer subscription forms
-- Post page subscription form
-- a Call to action section in Post page to encourage visitors to subscribe if the post is set to Members only.
+- a page subscription form
+- if the post is set to Members only, a Call to action section in Post page to encourage visitors to subscribe
 
 If the user is already logged in, all the forms will be hidden automatically.
 
@@ -151,7 +151,7 @@ To remove this column, open the `partials/member-plans.hbs` file and remove line
 
 ---
 
-Clicking the free plan button will direct the user to the [`/signup/`](http://krabi.aspirethemes.com/signup/) page with an email and subscribe button.
+Clicking the **Free** button will direct the user to the [`/signup/`](http://krabi.aspirethemes.com/signup/).
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/2cab85bf195391d81bd116d8aabf2dc70fead2c8/45565/images/docs/ghost/krabi/signup-free.png)
 
@@ -188,7 +188,7 @@ For more information about Members, connecting Stripe, and setting the package p
 
 *RTL* means right to left. Turning on RTL lets the theme show content in languages that are written from right to left, like Arabic or Hebrew.
 
-To enable the RTL version, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
+To enable the RTL option, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
 
 ![Krabi Ghost Theme Activate RTL](https://d33wubrfki0l68.cloudfront.net/44f2a8200f9544cfd5dd36c75e62378a0f38cc16/d57cd/images/docs/ghost/shared/inline-css-rtl.png)
 
@@ -198,7 +198,7 @@ Save the file and upload the theme to your Ghost blog.
 
 ### Navigation
 
-You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area located at **ghost/#/settings/design**.
+You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area, located at `ghost/#/settings/design`.
 
 ![Ghost navigation menu](https://d33wubrfki0l68.cloudfront.net/feae47e5c4b5855f19a193b572a72946ab6fe06c/f91da/images/docs/ghost/shared/navigation.png)
 
@@ -206,7 +206,7 @@ Follow these steps to include a static page on your navigation menu. First, type
 
 ![Ghost label field](https://d33wubrfki0l68.cloudfront.net/9763dfb165f2472dc7606232b0d651c421ae44bc/35266/images/docs/ghost/shared/label-field.png)
 
-Next, click on the **URL** field of the menu item. You'll see that the blog URL is already auto-populated. Add the page slug after the final **/**. When you're satisfied with your page configurations, click the blue **Save** button to add the page to the navigation menu.
+Next, click on the **URL** field of the menu item. The blog URL will already be auto-populated. Add the page slug after the final **/**. When you're satisfied with your page configurations, click the blue **Save** button to add the page to the navigation menu.
 
 ---
 
@@ -242,7 +242,7 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 
 ### Tags Page
 
-To create the Tags page:
+Follow these steps to create the Tags page:
 1. From the Ghost admin **Pages** section, create a new page and give it a title, like "Tags."
 2. From **Page settings**, select the **Tags** template.
 3. Publish the page.
@@ -291,13 +291,13 @@ To create the Contact page:
 </form>
 ```
 
-For more information, check the [How to Add a Contact Form to Your Ghost Blog](https://aspirethemes.com/blog/ghost-contact-form) blog post.
+For more information, check out [How to Add a Contact Form to Your Ghost Blog](https://aspirethemes.com/blog/ghost-contact-form).
 
 ---
 
 ### Disqus Comments
 
-Open the `partials/disqus.hbs` file. Replace the `aspirethemes-demos` value with the `DISQUS_SHORTNAME` variable to match your Disqus account shortname.
+To enable [Disqus](https://disqus.com/) as a comments system, open the `partials/disqus.hbs` file. Replace the `aspirethemes-demos` value with the ` disqus_shortname` variable to match your Disqus account shortname.
 
 ```js
 var disqus_shortname = 'aspirethemes-demos';
@@ -309,9 +309,9 @@ So, if your Disqus shortname is `exampleone`, the final code above should be:
 var disqus_shortname = 'exampleone';
 ```
 
-From the theme side, that’s all you need to set up Disqus. If you have any issues with comments not loading, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
+From the theme's side, that’s all you need to set up Disqus. If you have any issues with comments not loading, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
 
- If you still have issues, check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22).
+If you still have issues, check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22).
 
 ---
 
@@ -337,7 +337,7 @@ You can read more about Ghost visibility choices at [Content visibility](https:/
 
 ---
 
-#### CommentBox Comments
+### CommentBox Comments
 
 To enable [CommentBox](https://commentbox.io) as a comments system, open `post.hbs` file and replace line `40` replace with `{{> commentbox}}`.
 
@@ -367,7 +367,7 @@ To remove this section, open the `partials/sidebar.hbs` file and remove line `8`
 
 The Article page will show Author info in two places.
 
-* The top header under the title and near the social sharing icons. To remove, open the `partials/post-header.hbs` file and remove lines `16` to `24` and lines `26` to `27`.
+* In the top header, under the title and near the social sharing icons. To remove, open the `partials/post-header.hbs` file and remove lines `16` to `24` and lines `26` to `27`.
 
 * Under the blog article content. To remove, open the `post.hbs` file and remove lines `23` to `25`.
 
@@ -428,7 +428,7 @@ For example, this inline code `absolute="true"` will produce the following look:
 
 ---
 
-### Prism
+#### Prism
 
 Krabi ships with [Prism.js](http://prismjs.com/), a lightweight, robust, and elegant syntax highlighter.
 
@@ -488,7 +488,7 @@ The Ghost CMS supports adding Facebook and Twitter profile URLs from the admin p
 
 ![social-accounts](https://d33wubrfki0l68.cloudfront.net/3e76f93de7ae6b06126c7686e706673ec8ccac65/bdc4e/images/docs/ghost/shared/social-accounts.png)
 
-For other social accounts, the theme use [Evil Icons](http://evil-icons.io/) to provide very simple and clean icons. Here you can find a list of the social media icons to use:
+For other social accounts, the theme uses [Evil Icons](http://evil-icons.io/) to provide very simple and clean icons. Here you can find a list of the social media icons to use:
 
 Facebook
 
@@ -574,7 +574,7 @@ Youtube
 <span data-icon='ei-sc-youtube' data-size='s'></span>
 ```
 
-Edit or update your social links in the `partials/sidebar-social-icons.hbs`  file. For example, here's the Instagram code block:
+Ghost supports adding only two social links from the admin, Twitter and Facebook. The theme comes with other social icons in the sidebar. Edit or update these in the `partials/sidebar-social-icons.hbs`  file. For example, here's the Instagram code block:
 
 ```html
 <li class='c-social-icons__item'>
@@ -584,7 +584,7 @@ Edit or update your social links in the `partials/sidebar-social-icons.hbs`  fil
 
 ```
 
-The code above contains the ICON code from the above list, the social media link (`a`) within a list element (`li`).
+The code above contains the ICON code from the above list, and the social media link (`a`) within a list element (`li`).
 
 Next, replace your Instagram full URL with the link `href` value. If your Instagram URL is:
 
@@ -608,7 +608,7 @@ If you want to completely remove Instagram, you can delete all the code block, t
 
 ### Update Favicon
 
-You can change the favicon in Ghost from the **Admin > General > PUBLICATION IDENTITY > Publication icon**.
+You can change the favicon in Ghost from **Admin > General > PUBLICATION IDENTITY > Publication icon**.
 
 ![Update Ghost CMS favicon](https://d33wubrfki0l68.cloudfront.net/82380d584ef2c6cece40ca86f743915e0b192572/e48dd/images/docs/ghost/shared/update-favicon.png)
 
@@ -618,7 +618,7 @@ You can change the favicon in Ghost from the **Admin > General > PUBLICATION IDE
 
 Krabi supports [Ghost i18n](https://themes.ghost.org/docs/i18n) and comes with **German**, **Italian**, **Spanish**, **French** **Finnish**, **Portuguese** **Dutch**, **Turkish** and **Danish** translations.
 
-To use an available language other than English, go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the [*ISO Code*](https://www.w3schools.com/tags/ref_language_codes.asp).
+To use a language other than English, go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the [*ISO Code*](https://www.w3schools.com/tags/ref_language_codes.asp).
 
 - `da` for Danish
 - `de` for Germany
@@ -640,7 +640,7 @@ To use an available language other than English, go to **Admin > General > PUBLI
 To add a new language, follow these steps.
 
 1. Create a new file in the theme's `locales` folder with the language [ISO Code](https://www.w3schools.com/tags/ref_language_codes.asp) code. So, if the new language is Arabic, the new file name will be `ar.json`.
-2. Copy the `en.json` file content into your new file and start to translate as shown in the following section.
+2. Copy the `en.json` file content into your new file and start to translate, as shown in the following section.
 3. Go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the language code (`ar` in this example).
 
 ---
@@ -772,7 +772,7 @@ If you are a developer and need to do heavy customization work, the theme uses
 
 #### Note
 
-Changing any `hbs` file, for example, the `post.hbs` file **does not** require being in a development mode with gulp running. Just edit the file in your preferred editor and upload it.
+Changing any `hbs` file, for example, the `post.hbs` file **does not** require being in  development mode with gulp running. Just edit the file in your preferred editor and upload it.
 
 First, make sure you have [**Node.js**](https://nodejs.org/en/), [**npm**](https://www.npmjs.com/), [**Gulp CLI**](https://gulpjs.com/docs/en/getting-started/quick-start#install-the-gulp-command-line-utility), and [**Bower**](https://bower.io/#install-bower) installed. Check [My Current Setup](#my-current-setup).
 
@@ -821,7 +821,7 @@ Local version: 4.0.2
 
 This environment works well for running Ghost and also for theme development.
 
-I'm use macOS.
+I use macOS.
 
 ---
 
@@ -882,7 +882,7 @@ The result will be.
 
 ![Krabi Ghost Theme Changing Colors with CSS Variables](https://d33wubrfki0l68.cloudfront.net/f198fd98d9ad212631534236ecc9e2ab3bd7df50/025d6/images/docs/ghost/krabi/color-variables-change.png)
 
-The color brand is used for buttons, links color, and link hovers. In the above example, we changed the color to be `red`. You can override this for any other variable.
+The variable `--color-brand` is used for buttons, links, and link hovers. In the above example, we changed the color to be `red`. You can override this for any other variable.
 
 If, for example, you want to add a color that's not in the available theme 
 variables, or add another style to a new element, you can create a new 
@@ -945,7 +945,7 @@ The full code in [Code Injection](#code-injection) would be:
 
 #### Customize Logo Size
 
-If you are using an image as a logo instead of the site name and want to change the logo size, you can use the following code.
+If you are using an image as a logo (instead of the site name) and want to change the logo size, you can use the following code.
 
 ```html
 <style>
@@ -955,7 +955,7 @@ If you are using an image as a logo instead of the site name and want to change 
 </style>
 ```
 
-The default value is `96px`, so you can increase this value to match your preference. If the loge image has a large white space around it, make sure you trim that space to get good results.
+The default value is `96px`, so you can increase this value to match your preference. If the logo image has a large white space around it, make sure you trim that space to get good results.
 
 ---
 
@@ -1022,7 +1022,7 @@ To remove the date from all posts, add the following CSS code to Ghost [Code Inj
 
 Click **Save**.
 
-In order, this code will remove the date from the following:
+This code will remove the date from the following:
 
 - Sidebar postcard
 - Home postcard
@@ -1033,7 +1033,7 @@ In order, this code will remove the date from the following:
 
 #### Add New Sidebar Widget
 
-Suppose you want to add a new widget to the sidebar. Use the following code as a skeleton for the widget.
+If you want to add a new widget to the sidebar, use the following code as a skeleton for the widget.
 
 To add it to the sidebar, copy and paste it in the `/partials/sidebar.hbs` theme file before line *9*.
 
@@ -1054,7 +1054,7 @@ Here you have two content placeholders.
 - *YOUR_TITLE*: Replace this with your widget title
 - *YOUR_CONTENT_HERE*: Replace this with your widget content
 
-If you don't want to add a title, your skeleton should be.
+If you don't want to add a title, your skeleton look like this.
 
 ```html
 <div class='c-widget'>
@@ -1068,7 +1068,7 @@ If you don't want to add a title, your skeleton should be.
 
 #### Zip Theme Files
 
-To create a clean and small theme package. You can exclude different directories using the following CLI command:
+To create a clean and small theme package, you can exclude different directories using the following CLI command:
 
 ```sh
 zip -r krabi.zip krabi -x '*node_modules*' '*bower_components*'
