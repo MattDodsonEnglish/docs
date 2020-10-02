@@ -4,54 +4,61 @@ Once you finish making your changes, **zip** the theme files, and [upload](#them
 
 ---
 
-- [Theme Installation](#theme-installation)
-- [Create a New Content API Key](#create-a-new-content-api-key) (<span class='u-color-success u-font-small'>Required</span>)
-- [Upload the routes.yaml File](#upload-the-routesyaml-file) (<span class='u-color-success u-font-small'>Required</span>)
-- [Members / Subscription](#members--subscription)
-  - [Edit Plans Features](#edit-plans-features)
-  - [Remove ‘Log in’ and ‘Subscribe’ from Header](#remove-log-in-and-subscribe-from-header)
-  - [Membership Troubleshooting Tips](#membership-troubleshooting-tips)
-- [RTL (Right to Left)](#rtl)
-- [Header Navigation](#navigation)
-  - [Footer Navigation](#secondary-footer-navigation)
-- [Header Tags Menu](#header-tags-menu)
-- [Search](#search)
-- [Tags Page](#tags-page)
-- [Authors Page](#authors-page)
-- [Contact Page](#contact-page)
-- [Comments](#Comments)
-  - [Disqus](#disqus-comments)
-    - [Disable Disqus](#disable-disqus)
-  - [CommentBox Comments](#commentbox-comments)
-  - [Commento Comments](#commento-comments)
-- [Sidebar Authors](#sidebar-authors)
-- [Article Page Author](#article-page-author)
-- [Posts Per Page](#posts-per-page)
-- [Syntax Highlighting](#syntax-highlighting)
-  - [Prism](#prism)
-- [Related Posts](#related-posts)
-- [Google Analytics](#google-analytics)
-- [Responsive Tables](#responsive-tables)
-- [Social Sharing Icons](#social-sharing-icons)
-- [Sidebar Social Media Icons](#sidebar-social-media-icons)
-- [Update Favicon](#update-favicon)
-- [Theme Translation](#theme-translation)
-  - [Add New Language](#add-new-language)
-  - [Edit Translation](#edit-translation)
-- [Theme Deploy with GitHub Actions](#theme-deploy-with-github-actions)
-- [Theme Development](#theme-development)
-  - [Code Injection](#code-injection)
-  - [Changing Colors with CSS Variables](#changing-colors-with-css-variables)
-  - [Customize Images Height](#customize-images-height)
-  - [Customize Logo Size](#customize-logo-size)
-  - [Center Post Page](#center-post-page)
-  - [Remove the ‘Public’, ‘Members’ and ‘Paid’ Labels from Post Card](#remove-the-public-members-and-paid-labels-from-post-card)
-  - [Remove Date from All Posts](#remove-date-from-all-posts)
-  - [Add New Sidebar Widget](#add-new-sidebar-widget)
-  - [Zip Theme Files](#zip-theme-files)
-- [Theme Update](#theme-update)
+Table of Contents
+=================
 
----
+* [Theme Installation](#theme-installation)
+* [Upload the routes.yaml File](#upload-the-routesyaml-file) (<span class='u-color-successu-font-small'>Required</span>)
+* [Create a New Content API Key](#create-a-new-content-api-key) (<span class='u-color-successu-font-small'>Required</span>)
+* [Members / Subscriptions](#members--subscriptions)
+   * [Edit Plan Features](#edit-plan-features)
+   * [Remove ‘Log In’ and ‘Subscribe’ from Header](#remove-log-in-and-subscribe-from-header)
+   * [Membership Troubleshooting Tips](#membership-troubleshooting-tips)
+* [Navigation](#navigation)
+   * [Header Tags Menu](#header-tags-menu)
+   * [Secondary Footer Navigation](#secondary-footer-navigation)
+* [Search](#search)
+* [Pages](#pages)
+  * [Tags Page](#tags-page)
+  * [Authors Page](#authors-page)
+  * [Contact Page](#contact-page)
+* [Comments](#comments)
+  * [Disqus](#disqus)
+  * [CommentBox Comments](#commentbox-comments)
+  * [Commento Comments](#commento-comments)
+* [Sidebar Authors](#sidebar-authors)
+* [Article Author](#article-author)
+* [Posts Per Page](#posts-per-page)
+* [Related Posts](#related-posts)
+* [Syntax Highlighting](#syntax-highlighting)
+  * [Prism](#prism)
+* [Google Analytics](#google-analytics)
+* [Responsive Tables](#responsive-tables)
+* [Social Networks](#social-networks)
+  * [Social Sharing Icons](#social-sharing-icons)
+  * [Sidebar Social Media Icons](#sidebar-social-media-icons)
+* [Update Favicon](#update-favicon)
+* [Languages](#languages)
+  * [Theme Translation](#theme-translation)
+  * [RTL](#rtl)
+  * [Add a New Language](#add-a-new-language)
+  * [Edit a Translation](#edit-a-translation)
+* [Theme Deploy with GitHub Actions](#theme-deploy-with-github-actions)
+* [Theme Development](#theme-development)
+  * [Note](#note)
+  * [My Current Setup](#my-current-setup)
+  * [Code Injection](#code-injection)
+  * [Changing Colors with CSS Variables](#changing-colors-with-css-variables)
+  * [Customize Image Height](#customize-image-height)
+  * [Customize Logo Size](#customize-logo-size)
+  * [Center Post Page](#center-post-page)
+  * [Remove the ‘Public’, ‘Members’ and ‘Paid’ Labels from a Post](#remove-the-public-members-and-paid-labels-from-a-post-card)
+  * [Remove Date from All Posts](#remove-date-from-all-posts)
+  * [Add a New Sidebar Widget](#add-a-new-sidebar-widget)
+  * [Zip Theme Files](#zip-theme-files)
+* [Theme Update](#theme-update)
+
+----
 
 ### Theme Installation
 
@@ -86,8 +93,7 @@ There will already be a default `routes.yaml` file uploaded to Ghost. You need t
 
 ### Create a New Content API Key
 
-For theme search to work, you'll need to create a new *Content API Key*. These 
-steps tell you how.
+To enable certain features, like [Search](#search) and [Related Posts](#related-posts), you'll need to create a new *Content API Key*. Follow these steps to create your key.
 
 In the left-side menu of your Ghost admin, click **Integrations** then **+ Add custom integration**.
 
@@ -131,8 +137,8 @@ Once enabled, different parts of the theme will appear on the website:
 
 - Login In and Subscribe buttons in the header
 - Sidebar and Footer subscription forms
-- a page subscription form
-- if the post is set to Members only, a Call to action section in Post page to encourage visitors to subscribe
+- A page subscription form
+- If the post is set to Members only, a Call to action section in Post page to encourage visitors to subscribe
 
 If the user is already logged in, all the forms will be hidden automatically.
 
@@ -172,19 +178,6 @@ For more information about Members, connecting Stripe, and setting the package p
 
 ---
 
-### RTL
-
-*RTL* means right to left. Turning on RTL makes the theme readable for
-languages that are written from right to left, like Arabic or Hebrew.
-
-To enable the RTL option, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
-
-![Krabi Ghost Theme Activate RTL](https://d33wubrfki0l68.cloudfront.net/44f2a8200f9544cfd5dd36c75e62378a0f38cc16/d57cd/images/docs/ghost/shared/inline-css-rtl.png)
-
-Save the file and upload the theme to your Ghost blog.
-
----
-
 ### Navigation
 
 You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area, located at `ghost/#/settings/design`.
@@ -197,13 +190,7 @@ To include a static page on your navigation menu, follow these steps. First, typ
 
 Next, click on the item's **URL**. The blog URL will already be auto-populated. Add the page slug after the final **/**. When you're satisfied with your page configurations, click the blue **Save** button to add the page to the navigation menu.
 
-#### Secondary Footer Navigation
-
-Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at **ghost/#/settings/design**.
-
----
-
-### Header Tags Menu
+#### Header Tags Menu
 
 The tags menu will automatically show all the blog tags in alphabetical order.
 
@@ -212,6 +199,11 @@ The tags menu will automatically show all the blog tags in alphabetical order.
 If you want to remove the **Latest** tab, open the `partials/tags-list.hbs` file and remove lines `7` to `9`.
 
 If you want to remove the entire tags list, open the `default.hbs` and `default-wide.hbs` files and remove line `12` from both of them.
+
+#### Secondary Footer Navigation
+
+Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at **ghost/#/settings/design**.
+
 
 ---
 
@@ -228,11 +220,13 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 ---
 
 ### Pages
+
 Manage pages for Tags, Authors, and Contacts from the **Pages** section of Ghost admin,
 
 #### Tags Page
 
 Follow these steps to create the Tags page:
+
 1. From the Ghost admin **Pages** section, create a new page and give it a title, like "Tags."
 2. From **Page settings**, select the **Tags** template.
 3. Publish the page.
@@ -283,7 +277,7 @@ For more information, check out [How to Add a Contact Form to Your Ghost Blog](h
 
 ### Comments
 
-The theme supports comments from Disqus, CommentTO and CommentBox.
+The theme supports comments from Disqus, Commento and CommentBox.
 
 #### Disqus
 
@@ -303,9 +297,7 @@ From the theme's side, that’s all you need to set up Disqus. If you have any i
 
 If you still have issues, check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22).
 
-##### Disable Disqus
-
-To disable Disqus comments, open the `post.hbs` file and comment or delete the line containing the `{{> disqus}}` text (line `40`).
+**Disable Disqus.** To disable Disqus comments, open the `post.hbs` file and comment or delete the line containing the `{{> disqus}}` text (line `40`).
 
 ##### Show Comments for Signed-in Users Only
 
@@ -369,6 +361,14 @@ The theme default value is set to `{{include.postsPerPage}}` posts per page.
 
 ---
 
+### Related Posts
+
+If other posts share the same tags, related posts will be visible at the bottom of a post.
+
+Enabling the [Content API](#create-a-new-content-api-key) is required.
+
+---
+
 ### Syntax Highlighting
 
 You can add a fenced code block by placing triple backticks <code>```</code> before and after the code block. For example:
@@ -387,7 +387,7 @@ This will produce the following gray look:
 
 ![Krabi Ghost Theme Syntax Highlighting](https://d33wubrfki0l68.cloudfront.net/88580a906fc67c5523b816d32ddd7405bfaacfdc/cc565/images/docs/ghost/krabi/syntax-highlighting-raw-output.png)
 
-To <strong>highlight</strong> a code block. Add the language alias like `css` or `js` to the code block. For example, the CSS code in the previous example will wrap between <code>```css</code> and <code>```</code> as follows:
+To <strong>highlight</strong> a code block, add the language alias like `css` or `js` to the code block. For example, the CSS code in the previous example will wrap between <code>```css</code> and <code>```</code> as follows:
 
 <pre>
 ```css
@@ -416,7 +416,7 @@ Krabi ships with [Prism.js](http://prismjs.com/), a lightweight, robust, and ele
 
 The [initial Prism package](http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) includes some languages, like *Markup*, *CSS*, *C-like*, and *JavaScript*.
 
-You can support more languages. For example, to add support for PHP, get the PHP component script from [Prism CDN](https://cdnjs.com/libraries/prism).
+You can add support for more languages. For example, to add support for PHP, get the PHP component script from [Prism CDN](https://cdnjs.com/libraries/prism).
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/components/prism-php.js"></script>
@@ -428,14 +428,6 @@ From the side admin menu, go to **Code Injection** and add the script to the **S
 
 ---
 
-### Related Posts
-
-If there are similar posts sharing the same tags, related posts will be visible at the bottom of a post.
-
-Enabling the [Public API](#enable-the-ghost-public-api) is required.
-
----
-
 ### Google Analytics
 
 To integrate Google Analytics, I recommend using the [Google Analytics](https://ghost.org/integrations/google/) integration by Ghost.
@@ -444,7 +436,7 @@ To integrate Google Analytics, I recommend using the [Google Analytics](https://
 
 ### Responsive Tables
 
-Responsive tables are required and essential for adding tabular content and allowing tables to be scrolled horizontally. You can make any table responsive across all viewports by wrapping a `table` with `.responsive-table`, for example:
+To add tabular content and allowing tables to be scrolled horizontally, responsive tables are required and essential. You can make any table responsive across all viewports by wrapping a `table` with `.responsive-table`, for example:
 
 ```html
 <div class='responsive-table'>
@@ -456,13 +448,15 @@ Responsive tables are required and essential for adding tabular content and allo
 
 ---
 
-### Social Sharing Icons
+### Social Networks
+
+The theme comes with many options to add sharing buttons and social media icons.
+
+#### Social Sharing Icons
 
 You can customize and update a post's social media sharing icons from the `partials/share.hbs` theme file.
 
----
-
-### Sidebar Social Media Icons
+#### Sidebar Social Media Icons
 
 Sidebar social media links are placed in the `partials/sidebar-social-icons.hbs` file.
 
@@ -596,7 +590,12 @@ You can change the favicon in Ghost from **Admin > General > PUBLICATION IDENTIT
 
 ---
 
-### Theme Translation
+### Languages
+
+Krabi ships with many languages already. But if you'd like to add another
+one, you'll be able to do that too.
+
+#### Theme Translation
 
 Krabi supports [Ghost i18n](https://themes.ghost.org/docs/i18n) and comes with **German**, **Italian**, **Spanish**, **French** **Finnish**, **Portuguese** **Dutch**, **Turkish** and **Danish** translations.
 
@@ -615,7 +614,16 @@ To use a language other than English, go to **Admin > General > PUBLICATION INFO
 
 ![Ghost Publication Language Setting](https://d33wubrfki0l68.cloudfront.net/5f6de54875c4443eae6633a37f3ff5746a520c50/112db/images/docs/ghost/shared/publication-language.png)
 
----
+#### RTL
+
+*RTL* means right to left. Turning on RTL makes the theme readable for
+languages that are written from right to left, like Arabic or Hebrew.
+
+To enable the RTL option, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
+
+![Krabi Ghost Theme Activate RTL](https://d33wubrfki0l68.cloudfront.net/44f2a8200f9544cfd5dd36c75e62378a0f38cc16/d57cd/images/docs/ghost/shared/inline-css-rtl.png)
+
+Save the file and upload the theme to your Ghost blog.
 
 #### Add a New Language
 
@@ -625,11 +633,10 @@ To add a new language, follow these steps.
 2. Copy the `en.json` file content into your new file and start to translate, as shown in the following section.
 3. Go to **Admin > General > PUBLICATION INFO > Publication Language** and enter the language code (`ar` in this example).
 
----
-
 #### Edit a Translation
 
-To improve or edit a translation in a specific available language, you can open the language file in the `locales` folder:
+To improve or edit a translation in a specific available language, you can open
+the language file in the `locales` folder:
 
 ```sh
 |____locales
@@ -733,7 +740,7 @@ Each line consists of a left key (`"More Posts"`) and a right value (`"Mehr Arti
 
 The key is plain English that exists in all translation files and **should not be** changed. You should change only the value.
 
-If you have any suggestions to improve a current translations or add a new language, please <a href='{{ site.mailto }}'>let me know</a>.
+If you have any suggestions to improve a current translation or add a new language, please <a href='{{ site.mailto }}'>let me know</a>.
 
 ---
 
@@ -780,8 +787,6 @@ Gulp will produce two files:
  If you are working with Gulp, it's recommended you avoid editing these files. Instead, do customizations in `assets/sass` for CSS or in `assets/js/app.js`
  JavaScript. This way you can make sure the flow is going in the right direction and never lose any changes.
 
----
-
 #### My Current Setup
 
 In case you are wondering what my current environment set up is, and which package versions I use, take a look at the following.
@@ -805,8 +810,6 @@ This environment works well for running Ghost and also for theme development.
 
 I use macOS.
 
----
-
 #### Code Injection
 
 Another choice for customization is to use the Ghost **Code Injection** settings in Ghost admin. For a CSS example, you can use the following code to change the logo color and font size.
@@ -819,8 +822,6 @@ Another choice for customization is to use the Ghost **Code Injection** settings
   }
 </style>
 ```
-
----
 
 #### Changing Colors with CSS Variables
 
@@ -860,14 +861,14 @@ For example, if you wanted to change the theme's brand color, you'd change  `#58
 </style>
 ```
 
-The result will be.
+The result will look like this:
 
 ![Krabi Ghost Theme Changing Colors with CSS Variables](https://d33wubrfki0l68.cloudfront.net/f198fd98d9ad212631534236ecc9e2ab3bd7df50/025d6/images/docs/ghost/krabi/color-variables-change.png)
 
 The variable `--color-brand` is used for buttons, links, and link hovers. In the above example, we changed the color to be `red`. You can override this for any other variable.
 
-If, for example, you want to add a color that's not in the available theme 
-variables, or add another style to a new element, you can create a new 
+If, for example, you want to add a color that's not in the available theme
+variables, or add another style to a new element, you can create a new
 variable and give it a name and value.
 
 We can extend the previous example to add a new color for the logo color and assign that variable to the `.c-logo__link` class.
@@ -923,8 +924,6 @@ The full code in [Code Injection](#code-injection) would be:
 </style>
 ```
 
----
-
 #### Customize Logo Size
 
 If you are using an image as a logo (instead of the site name) and want to change the logo size, you can use the following code.
@@ -938,8 +937,6 @@ If you are using an image as a logo (instead of the site name) and want to chang
 ```
 
 The default value is `96px`, so you can increase this value to match your preference. If the logo image has a large white space around it, make sure you trim that space to get good results.
-
----
 
 #### Center Post Page
 
@@ -979,13 +976,9 @@ In case you want to add a wide and full-width style to images, you can add the f
 </style>
 ```
 
----
-
 #### Remove the ‘Public’, ‘Members’ and ‘Paid’ Labels from a Post Card
 
 Open the `partials/post-card.hbs` file and remove lines `23` to `29`.
-
----
 
 #### Remove Date from All Posts
 
@@ -1013,7 +1006,7 @@ This code will remove the date from the following:
 
 ---
 
-#### Add New Sidebar Widget
+#### Add a New Sidebar Widget
 
 If you want to add a new widget to the sidebar, use the following code as a skeleton for the widget.
 
@@ -1046,8 +1039,6 @@ If you don't want to add a title, your skeleton look like this.
 </div>
 ```
 
----
-
 #### Zip Theme Files
 
 To create a clean and small theme package, you can exclude different directories using the following CLI command:
@@ -1056,7 +1047,7 @@ To create a clean and small theme package, you can exclude different directories
 zip -r krabi.zip krabi -x '*node_modules*' '*bower_components*'
 ```
 
-This will exclude *node_modules* and *bower_components* directories from the final zip file.
+This will exclude the *node_modules* and *bower_components* directories from the final zip file.
 
 If you are [running gulp](#theme-development), you can type the `gulp zip` command to do this.
 
@@ -1071,6 +1062,6 @@ There are two choices:
 - Keep your current theme and replace only the changed files from the new version. You can find the changed files on the theme page [**Changelog**](/changelogs/krabi)
 - Or, use the new version as a starting point and redo your theme changes and customizations
 
-One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. So, it's always recommengitgded to keep your custom CSS code with Code Injection.
+One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. It's always recommended to keep your custom CSS code with Code Injection.
 
 ---
