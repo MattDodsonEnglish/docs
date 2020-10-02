@@ -65,6 +65,7 @@ The first step is to unzip the downloaded package. Inside the new directory `kra
 you want to activate it later, click **Close**.
 
 ---
+
 ### Upload the routes.yaml File
 
 The `routes.yaml` file is required for member sign up and subscription flows.
@@ -85,7 +86,8 @@ There will already be a default `routes.yaml` file uploaded to Ghost. You need t
 
 ### Create a New Content API Key
 
-For theme search to work, you'll need to create a new *Content API Key*. These steps will tell you how.
+For theme search to work, you'll need to create a new *Content API Key*. These 
+steps tell you how.
 
 In the left-side menu of your Ghost admin, click **Integrations** then **+ Add custom integration**.
 
@@ -117,8 +119,7 @@ Click **Save**.
 
 ---
 
-
-### Members / Subscription
+### Members / Subscriptions
 
 Make sure to [Upload the `routes.yaml` file](#upload-the-routesyaml-file).
 
@@ -139,7 +140,7 @@ If the user is already logged in, all the forms will be hidden automatically.
 
 #### Edit Plan Features
 
-To edit plan features, edit the `partials/member-plans.hbs` file. 
+To edit plan features, edit the `partials/member-plans.hbs` file.
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/ad03e3379c817808600d2d2a8bd2bff4aa09d24b/e2241/images/docs/ghost/krabi/plans.png)
 
@@ -147,25 +148,18 @@ The free plan column will be visible to guest users when they visit the [`/subsc
 
 To remove this column, open the `partials/member-plans.hbs` file and remove lines `2` to `17`.
 
----
-
-Clicking the **Free** button will direct the user to the [`/signup/`](http://krabi.aspirethemes.com/signup/).
+Clicking the **Free** button will direct the user to [`/signup/`](http://krabi.aspirethemes.com/signup/).
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/2cab85bf195391d81bd116d8aabf2dc70fead2c8/45565/images/docs/ghost/krabi/signup-free.png)
 
----
-
-If logged-in users try to subscribe to a plan from their account page, only the monthly and yearly plans will be displayed.
+If logged-in users try to subscribe to a plan from their account page, only the
+monthly and yearly plans will be displayed.
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/caf957b1c8e2b1f54a0bdb993da57f8e20f035c2/1c326/images/docs/ghost/krabi/plans-compact.png)
 
----
-
 #### Remove ‘Log In’ and ‘Subscribe’ from Header
 
-Open the `partials/header.hbs` file and remove lines `30` to `38`.
-
----
+To remove `Log In` and `Subscribe` from the header, open the `partials/header.hbs` file and remove lines `30` to `38`
 
 #### Membership Troubleshooting Tips
 
