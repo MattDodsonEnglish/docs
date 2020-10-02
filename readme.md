@@ -57,11 +57,12 @@ Once you finish making your changes, **zip** the theme files, and [upload](#them
 The first step is to unzip the downloaded package. Inside the new directory `krabi`, you will find the zipped theme and a documentation file. Follow these steps to upload the theme to your blog:
 
 1. Log in to your Ghost website admin (*example.com/ghost*).
-2. In the left-side menu of your admin, click **Design**.
+2. Click **Design** in the left-side menu.
 3. Scroll down to the **INSTALLED THEMES** section.
 4. Click **Upload a theme**.
 5. Select the theme file (*krabi.zip*).
-6. Once uploaded, click on **Activate now** to activate the theme immediately. If you want to activate it later, click **Close**.
+6. Once uploaded, click **Activate now** to activate the theme immediately. If
+you want to activate it later, click **Close**.
 
 ---
 ### Upload the routes.yaml File
@@ -71,7 +72,7 @@ The `routes.yaml` file is required for member sign up and subscription flows.
 To upload the file, follow these steps:
 
 0. Unzip the `krabi.zip` theme file.
-1. Go to the Ghost admin **Labs** settings page (`/#/settings/labs`).
+1. Go to the **Labs** page in Ghost admin (`/#/settings/labs`).
 2. Scroll down to the **Routes** section and click the **Upload routes YAML** button.
 3. Select and upload the `routes.yaml` file inside the theme zip file.
 
@@ -84,7 +85,7 @@ There will already be a default `routes.yaml` file uploaded to Ghost. You need t
 
 ### Create a New Content API Key
 
-For the theme search to work, follow these steps to make a new *Content API Key*.
+For theme search to work, you'll need to create a new *Content API Key*. These steps will tell you how.
 
 In the left-side menu of your Ghost admin, click **Integrations** then **+ Add custom integration**.
 
