@@ -13,16 +13,17 @@ Once you finish making your changes, **zip** the theme files, and [upload](#them
   - [Membership Troubleshooting Tips](#membership-troubleshooting-tips)
 - [RTL (Right to Left)](#rtl)
 - [Header Navigation](#navigation)
+  - [Footer Navigation](#secondary-footer-navigation)
 - [Header Tags Menu](#header-tags-menu)
-- [Footer Navigation](#secondary-footer-navigation)
 - [Search](#search)
 - [Tags Page](#tags-page)
 - [Authors Page](#authors-page)
 - [Contact Page](#contact-page)
-- [Disqus Comments](#disqus-comments)
-  - [Disable Disqus](#disable-disqus)
-- [CommentBox Comments](#commentbox-comments)
-- [Commento Comments](#commento-comments)
+- [Comments](#Comments)
+  - [Disqus](#disqus-comments)
+    - [Disable Disqus](#disable-disqus)
+  - [CommentBox Comments](#commentbox-comments)
+  - [Commento Comments](#commento-comments)
 - [Sidebar Authors](#sidebar-authors)
 - [Article Page Author](#article-page-author)
 - [Posts Per Page](#posts-per-page)
@@ -83,7 +84,6 @@ To upload the file, follow these steps:
 
 There will already be a default `routes.yaml` file uploaded to Ghost. You need to upload your theme's file to override it. This needs to be done separately, after uploading your theme's zip file.
 
-
 ### Create a New Content API Key
 
 For theme search to work, you'll need to create a new *Content API Key*. These 
@@ -136,8 +136,6 @@ Once enabled, different parts of the theme will appear on the website:
 
 If the user is already logged in, all the forms will be hidden automatically.
 
----
-
 #### Edit Plan Features
 
 To edit plan features, edit the `partials/member-plans.hbs` file.
@@ -168,9 +166,7 @@ If for any reason the subscribe form does not work or there is an error message,
 - If you are self-hosting your website, make sure to set up the [mail config](https://ghost.org/docs/concepts/config/#mail). After doing that, restart your Ghost server.
 - The website config URL should match the URL used to access the website, as described in the [Ghost docs](https://ghost.org/docs/concepts/config/#url).
 
-*Enter the URL that is used to access your publication. If using a subpath, enter the full path, `https://example.com/blog/`. If using SSL, always enter the URL with `https://`.*
-
----
+Enter the URL that is used to access your publication. If using a subpath, enter the full path, `https://example.com/blog/`. If using SSL, always enter the URL with `https://`.
 
 For more information about Members, connecting Stripe, and setting the package price, check the [official Ghost documentation](https://ghost.org/docs/members/introduction/).
 
@@ -178,7 +174,8 @@ For more information about Members, connecting Stripe, and setting the package p
 
 ### RTL
 
-*RTL* means right to left. Turning on RTL lets the theme show content in languages that are written from right to left, like Arabic or Hebrew.
+*RTL* means right to left. Turning on RTL makes the theme readable for
+languages that are written from right to left, like Arabic or Hebrew.
 
 To enable the RTL option, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
 
@@ -194,11 +191,15 @@ You can add, edit, delete, and reorder menu links on your Ghost blog in the **Na
 
 ![Ghost navigation menu](https://d33wubrfki0l68.cloudfront.net/feae47e5c4b5855f19a193b572a72946ab6fe06c/f91da/images/docs/ghost/shared/navigation.png)
 
-Follow these steps to include a static page on your navigation menu. First, type the name of the page as you'd like it to appear on your menu in the label field.
+To include a static page on your navigation menu, follow these steps. First, type the name of the page as you'd like it to appear on your menu in the label field.
 
 ![Ghost label field](https://d33wubrfki0l68.cloudfront.net/9763dfb165f2472dc7606232b0d651c421ae44bc/35266/images/docs/ghost/shared/label-field.png)
 
-Next, click on the **URL** field of the menu item. The blog URL will already be auto-populated. Add the page slug after the final **/**. When you're satisfied with your page configurations, click the blue **Save** button to add the page to the navigation menu.
+Next, click on the item's **URL**. The blog URL will already be auto-populated. Add the page slug after the final **/**. When you're satisfied with your page configurations, click the blue **Save** button to add the page to the navigation menu.
+
+#### Secondary Footer Navigation
+
+Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at **ghost/#/settings/design**.
 
 ---
 
@@ -214,12 +215,6 @@ If you want to remove the entire tags list, open the `default.hbs` and `default-
 
 ---
 
-### Secondary Footer Navigation
-
-Similar to [Header Navigation](#navigation), we can add the footer navigation from the *SECONDARY NAVIGATION* section of the admin area located at **ghost/#/settings/design**.
-
----
-
 ### Search
 
 Make sure to [create a new Content API Key](#create-a-new-content-api-key).
@@ -232,7 +227,10 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 
 ---
 
-### Tags Page
+### Pages
+Manage pages for Tags, Authors, and Contacts from the **Pages** section of Ghost admin,
+
+#### Tags Page
 
 Follow these steps to create the Tags page:
 1. From the Ghost admin **Pages** section, create a new page and give it a title, like "Tags."
@@ -242,13 +240,11 @@ Follow these steps to create the Tags page:
 
 ![Ghost Tags Page](https://d33wubrfki0l68.cloudfront.net/450bd467288a88b5b03edeaa1ea1c7845153a820/d0089/images/docs/ghost/shared/tags-page.png)
 
-#### Note
+##### Note for Self-hosters
 
 If you are self-hosting your website, you may need to do a server restart. This should get the **Tags** option to show up in the **Template** dropdown.
 
----
-
-### Authors Page
+#### Authors Page
 
 To create the Authors page:
 
@@ -259,13 +255,11 @@ To create the Authors page:
 
 ![Ghost Authors Page](https://d33wubrfki0l68.cloudfront.net/a7bf2c78299358d7baf81cd1954dfa361dce1449/a9e44/images/docs/ghost/shared/authors-page.png)
 
-#### Note
+###### Note for Self-hosters
 
 If you are self-hosting your website, you may need to do a server restart. This should get the **Authors** option to show up in the **Template** dropdown.
 
----
-
-### Contact Page
+#### Contact Page
 
 To create the Contact page:
 
@@ -287,7 +281,11 @@ For more information, check out [How to Add a Contact Form to Your Ghost Blog](h
 
 ---
 
-### Disqus Comments
+### Comments
+
+The theme supports comments from Disqus, CommentTO and CommentBox.
+
+#### Disqus
 
 To enable [Disqus](https://disqus.com/) as a comments system, open the `partials/disqus.hbs` file. Replace the `aspirethemes-demos` value with the ` disqus_shortname` variable to match your Disqus account shortname.
 
@@ -305,15 +303,11 @@ From the theme's side, that’s all you need to set up Disqus. If you have any i
 
 If you still have issues, check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22).
 
----
-
-#### Disable Disqus
+##### Disable Disqus
 
 To disable Disqus comments, open the `post.hbs` file and comment or delete the line containing the `{{> disqus}}` text (line `40`).
 
----
-
-#### Show Comments for Signed-in Users Only
+##### Show Comments for Signed-in Users Only
 
 If you want show comments for only signed-in users, open the `post.hbs` file and replace line `40` (`{{> disqus}}`) with the following code.
 
@@ -327,17 +321,13 @@ If you want show comments for only signed-in users, open the `post.hbs` file and
 
 You can read more about Ghost visibility choices at [Content visibility](https://ghost.org/docs/members/content-visibility/).
 
----
-
-### CommentBox Comments
+#### CommentBox Comments
 
 To enable [CommentBox](https://commentbox.io) as a comments system, open `post.hbs` file and replace line `40` replace with `{{> commentbox}}`.
 
-The next step is to create a commentbox account. From the dashboard, create a new project by filling your site information. You will then receive a *Project ID*.
+The next step is to create a CommentBox account. From the dashboard, create a new project by filling your site information. You will then receive a *Project ID*.
 
 Copy that *Project ID*, open the `partials/commentbox.hbs` file, and replace the `my-project-id` value with it. That's it.
-
----
 
 #### Commento Comments
 
