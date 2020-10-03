@@ -26,8 +26,9 @@ Table of Contents
   * [Disqus](#disqus)
   * [CommentBox Comments](#commentbox-comments)
   * [Commento Comments](#commento-comments)
-* [Sidebar Authors](#sidebar-authors)
-* [Article Author](#article-author)
+* [Show Authors](#show-authors)
+  * [Sidebar Authors](#sidebar-authors)
+  * [Article Author](#article-author)
 * [Posts Per Page](#posts-per-page)
 * [Related Posts](#related-posts)
 * [Syntax Highlighting](#syntax-highlighting)
@@ -89,7 +90,10 @@ To upload the file, follow these steps:
 
 #### Note: upload `routes.yaml` after uploading the theme zip
 
-There will already be a default `routes.yaml` file uploaded to Ghost. You need to upload your theme's file to override it. This needs to be done separately, after uploading your theme's zip file.
+There will already be a default `routes.yaml` file uploaded to Ghost. You need to upload your theme's `routes.yaml` to override the default.
+Do this separately, after uploading your theme's zip file.
+
+---
 
 ### Create a New Content API Key
 
@@ -103,13 +107,13 @@ Give the new integration a name, like "Search", and click **Create**.
 
 ![Name for the Ghost Custom integrations](https://d33wubrfki0l68.cloudfront.net/0533efbaff834bcc5b8dbe09a044313d3ecde050/8fcb0/images/docs/ghost/shared/custom-integrations/name.png)
 
-A new content API Key will be created. When you hover over it, a **Copy** button will appear. Click the button to copy the Key to the clipboard.
+A new content API Key will be created. When you hover over it, a **Copy** button will appear. Click the button to copy the key to the clipboard.
 
 ![Copy Ghost Custom integrations Content API Key](https://d33wubrfki0l68.cloudfront.net/21a910012bd866b1d5ba907bbd6da0fb020795e1/48437/images/docs/ghost/shared/custom-integrations/key.png)
 
 Next, click **Code injection** from the left-side admin menu.
 
-After replacing the *`API_KEY`*  value with your API Key, add the following code to the **Site Header** box. 
+After replacing the *`API_KEY`*  value with your API Key, add the following code to the **Site Header** box:
 
 ```shell
 <script>
@@ -138,7 +142,7 @@ Once enabled, different parts of the theme will appear on the website:
 - Login In and Subscribe buttons in the header
 - Sidebar and Footer subscription forms
 - A page subscription form
-- If the post is set to Members only, a Call to action section in Post page to encourage visitors to subscribe
+- If the post is set to Members Only, a Call to Action section on the Post page to encourage visitors to subscribe
 
 If the user is already logged in, all the forms will be hidden automatically.
 
@@ -157,7 +161,7 @@ Clicking the **Free** button will direct the user to [`/signup/`](http://krabi.a
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/2cab85bf195391d81bd116d8aabf2dc70fead2c8/45565/images/docs/ghost/krabi/signup-free.png)
 
 If logged-in users try to subscribe to a plan from their account page, only the
-monthly and yearly plans will be displayed.
+monthly and yearly plans will display.
 
 ![Subscription plans in Krabi](https://d33wubrfki0l68.cloudfront.net/caf957b1c8e2b1f54a0bdb993da57f8e20f035c2/1c326/images/docs/ghost/krabi/plans-compact.png)
 
@@ -180,7 +184,7 @@ For more information about Members, connecting Stripe, and setting the package p
 
 ### Navigation
 
-You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section of the admin area, located at `ghost/#/settings/design`.
+You can add, edit, delete, and reorder menu links on your Ghost blog in the **Navigation** section (**Admin > Settings > Design**).
 
 ![Ghost navigation menu](https://d33wubrfki0l68.cloudfront.net/feae47e5c4b5855f19a193b572a72946ab6fe06c/f91da/images/docs/ghost/shared/navigation.png)
 
@@ -221,7 +225,7 @@ The supported languages are German, Spanish, French, Portuguese, Italian, Finnis
 
 ### Pages
 
-Manage pages for Tags, Authors, and Contacts from the **Pages** section of Ghost admin,
+Manage pages for Tags, Authors, and Contacts from the **Pages** section of Ghost admin.
 
 #### Tags Page
 
@@ -249,7 +253,7 @@ To create the Authors page:
 
 ![Ghost Authors Page](https://d33wubrfki0l68.cloudfront.net/a7bf2c78299358d7baf81cd1954dfa361dce1449/a9e44/images/docs/ghost/shared/authors-page.png)
 
-###### Note for Self-hosters
+##### Note for Self-hosters
 
 If you are self-hosting your website, you may need to do a server restart. This should get the **Authors** option to show up in the **Template** dropdown.
 
@@ -297,7 +301,10 @@ From the theme's side, that’s all you need to set up Disqus. If you have any i
 
 If you still have issues, check the [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22).
 
-**Disable Disqus.** To disable Disqus comments, open the `post.hbs` file and comment or delete the line containing the `{{> disqus}}` text (line `40`).
+##### Disable Disqus
+
+To disable Disqus comments, open the `post.hbs` file and comment or delete
+the line containing the `{{> disqus}}` text (line `40`).
 
 ##### Show Comments for Signed-in Users Only
 
@@ -329,17 +336,19 @@ The next step is to create a Commento account and [register your domain](https:/
 
 ---
 
-### Sidebar Authors
+### Show Authors
+
+The theme lets you control how and where you show authors.
+
+#### Sidebar Authors
 
 The sidebar **Authors** section shows 3 authors ordered by post count.
 
 To remove this section, open the `partials/sidebar.hbs` file and remove line `8` (`{{> sidebar-authors }}`).
 
----
+#### Article Author
 
-### Article Author
-
-The Article page will show Author info in two places.
+Article page will show Author info in two places.
 
 * In the top header, under the title and near the social sharing icons. To remove, open the `partials/post-header.hbs` file and remove lines `16` to `24` and lines `26` to `27`.
 
@@ -436,7 +445,7 @@ To integrate Google Analytics, I recommend using the [Google Analytics](https://
 
 ### Responsive Tables
 
-To add tabular content and allowing tables to be scrolled horizontally, responsive tables are required and essential. You can make any table responsive across all viewports by wrapping a `table` with `.responsive-table`, for example:
+Responsive tables are required and essetial for adding tabular content and allowing tables to be scrolled horizontally. You can make any table responsive across all viewports by wrapping a `table` with `.responsive-table`, for example:
 
 ```html
 <div class='responsive-table'>
@@ -450,7 +459,7 @@ To add tabular content and allowing tables to be scrolled horizontally, responsi
 
 ### Social Networks
 
-The theme comes with many options to add sharing buttons and social media icons.
+The theme ships with many options to add sharing buttons and social media icons.
 
 #### Social Sharing Icons
 
@@ -550,7 +559,7 @@ Youtube
 <span data-icon='ei-sc-youtube' data-size='s'></span>
 ```
 
-Ghost supports adding only two social links from the admin, Twitter and Facebook. The theme comes with other social icons in the sidebar. Edit or update these in the `partials/sidebar-social-icons.hbs`  file. For example, here's the Instagram code block:
+As mentioned above, Ghosts supports adding only Twitter and Facebook links from the admin. But the theme comes with other social icons in the sidebar. Edit or update these in the `partials/sidebar-social-icons.hbs`  file. For example, here's the Instagram code block:
 
 ```html
 <li class='c-social-icons__item'>
@@ -619,7 +628,7 @@ To use a language other than English, go to **Admin > General > PUBLICATION INFO
 *RTL* means right to left. Turning on RTL makes the theme readable for
 languages that are written from right to left, like Arabic or Hebrew.
 
-To enable the RTL option, open the `default.hbs` file and change line ***10*** to `{{> compiled/inline-css-rtl }}`.
+To enable the RTL option, open the `default.hbs` file and change line **`10`** to `{{> compiled/inline-css-rtl }}`.
 
 ![Krabi Ghost Theme Activate RTL](https://d33wubrfki0l68.cloudfront.net/44f2a8200f9544cfd5dd36c75e62378a0f38cc16/d57cd/images/docs/ghost/shared/inline-css-rtl.png)
 
@@ -736,7 +745,7 @@ For example, the German translation file looks like this:
 }
 ```
 
-Each line consists of a left key (`"More Posts"`) and a right value (`"Mehr Artikel"`).
+Each line consists of a left _key_ (`"More Posts"`) and a right _value_ (`"Mehr Artikel"`).
 
 The key is plain English that exists in all translation files and **should not be** changed. You should change only the value.
 
@@ -789,7 +798,7 @@ Gulp will produce two files:
 
 #### My Current Setup
 
-In case you are wondering what my current environment set up is, and which package versions I use, take a look at the following.
+In case you are wondering what my current environment set up is, and which package versions I use, take a look at the following:
 
 ```bash
 $ node -v
@@ -1029,7 +1038,7 @@ Here you have two content placeholders.
 - *YOUR_TITLE*: Replace this with your widget title
 - *YOUR_CONTENT_HERE*: Replace this with your widget content
 
-If you don't want to add a title, your skeleton look like this.
+If you don't want to add a title, your skeleton look like this:
 
 ```html
 <div class='c-widget'>
@@ -1060,8 +1069,8 @@ You may be wondering: how can I update my theme to the latest theme version?
 There are two choices:
 
 - Keep your current theme and replace only the changed files from the new version. You can find the changed files on the theme page [**Changelog**](/changelogs/krabi)
-- Or, use the new version as a starting point and redo your theme changes and customizations
+- Use the new version as a starting point and redo your theme changes and customizations
 
-One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. It's always recommended to keep your custom CSS code with Code Injection.
+One way to reduce the need for redoing customizations is to use the [**Code Injection**](#code-injection) tool. This is very helpful for adding custom CSS and tracking code. Keeping your custom CSS code with Code Injection is always recommended.
 
 ---
